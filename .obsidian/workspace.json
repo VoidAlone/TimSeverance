@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Hobbies/Linux/Blog/Linux Packages.md",
+                "file": "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)/Week 1 - Day 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Packages"
+              "title": "Week 1 - Day 1"
             }
           },
           {
@@ -192,13 +192,20 @@
   },
   "active": "a87ef76d72f61d74",
   "lastOpenFiles": [
+    "docs/Academic/Algorithms and Data Structures/CS-2420(Deprecated)/Week 1.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420(Deprecated)/Class Logistics.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420(Deprecated)/Week 3.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420(Deprecated)/Week 2.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)/Week 1 - Day 1.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)/Schedule - Smr - 2nd Block -  2025.md",
+    "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)",
+    "docs/Hobbies/Linux/Blog/Linux Packages.md",
     "docs/Hobbies/Linux/Manual Installations/spotify_player.md",
     "docs/Academic/Random Learning Stuff/Universal Expansion, Fractals, etc.md",
     "docs/1. Positions.md",
     "docs/Hobbies/Art/Anime and manga influences.md",
     "docs/Hobbies/Art/American character designers.md",
     "docs/Hobbies/Linux/Instructions/Void Package Template resources for .NET 8.md",
-    "docs/Hobbies/Linux/Blog/Linux Packages.md",
     "docs/Hobbies/Linux/Blog/Getting into Linux.md",
     "docs/Hobbies/Linux/Instructions",
     "docs/Hobbies/Linux/Blog",
@@ -215,12 +222,6 @@
     "docs/Hobbies/Programming/Jake's Resume.md",
     "docs/Hobbies/Programming/CLI TUI App Projects.md",
     "docs/Academic/CS-2300/Exam 2 Prep.md",
-    "docs/Academic/CS-2300/Week 8.md",
-    "docs/Academic/CS-2300/Week 7.md",
-    "docs/Academic/CS-2370/Week 2.md",
-    "docs/Academic/CS-2420(Summer)/Week 4 - Stacks, Queues, Postfix.md",
-    "docs/Academic/CS-2300(Fall2024)/Week 1.md",
-    "docs/Hobbies/Game Dev/Godot vs Unreal.md",
     "docs/Academic/Inner Kernal",
     "Excalidraw",
     "docs/Hobbies/Programming",
@@ -228,7 +229,6 @@
     "docs/Academic/Random Learning Stuff",
     "docs/Images/Pasted image 20230908211202.png",
     "docs/Images/Pasted image 20230909184049.png",
-    "docs/Hobbies/Music",
-    "docs/Academic/CS-2300"
+    "docs/Hobbies/Music"
   ]
 }

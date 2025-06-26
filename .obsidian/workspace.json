@@ -25,12 +25,14 @@
             "id": "23aba0c4e6271014",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "332191680_925154381855281_2204844396748739005_n.jpg"
+                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Introduction.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "332191680_925154381855281_2204844396748739005_n"
+              "icon": "lucide-file",
+              "title": "Introduction"
             }
           },
           {
@@ -215,9 +217,10 @@
   },
   "active": "23aba0c4e6271014",
   "lastOpenFiles": [
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Mid Term Study Guide.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 1 - Intro and Searching.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Introduction.md",
     "332191680_925154381855281_2204844396748739005_n.jpg",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Introduction.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides/Schedule - Smr - 2nd Block -  2025.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides/AboutMe.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Search Help.md",
@@ -226,7 +229,6 @@
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 1.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 3.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 2 - Sorting.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Mid Term Study Guide.md",
     "docs/index.md",
     "docs/Teaching/Teaching.md",
     "docs/Teaching/Sayings.md",
@@ -241,7 +243,6 @@
     "docs/Hobbies/Game Dev/Unreal Engine/UE5 Bug Fixes.md",
     "docs/Hobbies/Inner Kernal/Meeting 1.md",
     "docs/Professional/GradeKit/TUI Design.md",
-    "docs/Hobbies/Game Dev/Unreal Engine/Untitled.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides",
     "docs/Hobbies/Linux/Instructions",
     "docs/Hobbies/Linux/Blog",

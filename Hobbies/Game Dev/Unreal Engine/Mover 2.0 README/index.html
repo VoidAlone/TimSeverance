@@ -1,0 +1,5336 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Gimbal%20Lock/">
+      
+      
+        <link rel="next" href="../Mover%202.0/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Mover Plugin - Tim's Big Website :D</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="lightish" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mover-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Tim&#39;s Big Website :D" class="md-header__button md-logo" aria-label="Tim's Big Website :D" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tim's Big Website :D
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mover Plugin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="lightish" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="darkish" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Tim&#39;s Big Website :D" class="md-nav__button md-logo" aria-label="Tim's Big Website :D" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tim's Big Website :D
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Excalidraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Excalidraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Excalidraw/Drawing%202025-01-22%2013.50.21.excalidraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drawing 2025 01 22 13.50.21.excalidraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Excalidraw/Drawing%202025-01-22%2014.50.00.excalidraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drawing 2025 01 22 14.50.00.excalidraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Excalidraw/Drawing%202025-01-22%2015.44.08.excalidraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drawing 2025 01 22 15.44.08.excalidraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hobbies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hobbies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hobbies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hobbies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Art
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Art
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Art/American%20character%20designers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    American character designers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Art/Anime%20and%20manga%20influences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anime and manga influences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Game Dev
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Game Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Godot%20vs%20Unreal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot vs Unreal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NVidia%20Character%20Controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NVidia Character Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Unreal Engine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unreal Engine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Blueprint%20Properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blueprint Properties
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Camera%20Rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camera Rotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Character%20Movement%20Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Character Movement Component
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom%20Movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Movement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Extended%20CMC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extended CMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gimbal%20Lock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UnrealEngine #Blueprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Mover Plugin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mover Plugin
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layered-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layered Moves
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instant-movement-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instant Movement Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Modifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-liaisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Liaisons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-with-character-movement-component-cmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing with Character Movement Component (CMC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameplay-debugger-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gameplay Debugger Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physics-driven-character-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics-driven Character Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations and Known Issues
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mover%202.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mover 2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UE5%20Bug%20Fixes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UE5 Bug Fixes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Weapon%20Implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weapon Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Blog/Getting%20into%20Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting into Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Blog/Linux%20Packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Instructions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/Desktop%20Launching%20for%20non%20packaged%20softare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desktop Launching for non packaged softare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/FetchxUpdater%20for%20non%20packaged%20software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FetchxUpdater for non packaged software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/Gnome%20Settings%20Daemon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gnome Settings Daemon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/Making%20Templates%20for%20void-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Templates for void packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/Setting%20dpi%20for%20i3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting dpi for i3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Instructions/Void%20Package%20Template%20resources%20for%20.NET%208/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Void Package Template resources for .NET 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Manual Installations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manual Installations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Manual%20Installations/Using%20i3wm%20with%20KDE%20Plasma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using i3wm with KDE Plasma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Manual%20Installations/spotify_player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spotify player
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Music
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Demise%20-%20Aegaeon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demise   Aegaeon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Guitar%20Instructors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guitar Instructors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/String%20Gauges%20and%20Tensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    String Gauges and Tensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Tones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_5" id="__nav_3_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FL Studio
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            FL Studio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/FL%20Studio/GGD%20-%20Channel%20and%20Piano%20Roll%20Mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GGD   Channel and Piano Roll Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_6" id="__nav_3_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Song Writing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Song Writing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Song%20Writing/Musical%20Toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Musical Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Song%20Writing/Tim%27s%20Song%20Lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Songs Learned
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_7" id="__nav_3_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theory Box
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Theory Box
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Theory%20Box/Modal%20Reflecting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modal Reflecting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Theory%20Box/Theory%20Junk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theory Junk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Music/Theory%20Box/Where%20I%20need%20to%20improve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Where I need to improve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/CLI%20TUI%20App%20Projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI TUI App Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Jake%27s%20Resume/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jake's Resume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/MSYS%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MSYS 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Rust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rust
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/UV%20for%20Python%20venv%27s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UV for Python venv's
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_6" id="__nav_3_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Database Junk
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Database Junk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Database%20Junk/Useful%20Links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Useful Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Teaching
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Sayings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sayings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Teaching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teaching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithms and Data Structures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithms and Data Structures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/Logs%2C%20Exponents%2C%20and%20intuitive%20Big%20O/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logs, Exponents, and intuitive Big O
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 2420(Deprecated)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS 2420(Deprecated)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Class%20Logistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Logistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%2011/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Deprecated%29/Week%208/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 2420(Summer Deprecated)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS 2420(Summer Deprecated)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Mid%20Term%20Study%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mid Term Study Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Search%20Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Help
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Week%201%20-%20Intro%20and%20Searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 1   Intro and Searching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Week%202%20-%20Sorting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 2   Sorting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Week%203%20-%20Linked%20Lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 3   Linked Lists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Algorithms%20and%20Data%20Structures/CS-2420%28Summer%20Deprecated%29/Week%204%20-%20Stacks%2C%20Queues%2C%20Postfix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 4   Stacks, Queues, Postfix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/Compiler%20Toolchain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compiler Toolchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 2370
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS 2370
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Exam%201%20Study%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam 1 Study Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Exam%202%20Study%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam 2 Study Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Final%20Exam%20Study%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Final Exam Study Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Inheritance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Multithreading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multithreading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/UML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-2370/Week%206%267%20%28Ask%20forgiveness%20instead%20of%20permission%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 6&7 (Ask forgiveness instead of permission)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 3370
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS 3370
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/Final%20Topics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Final Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/Module%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/Module%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/Module%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/Module%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P2%20Memory%20Pool%20and%20Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P2 Memory Pool and Techniques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P3%20String%20and%20Stream%20Processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P3 String and Stream Processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P4%20Analyze%3B%20Data%20Reduction%20with%20C%2B%2B%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P4 Analyze; Data Reduction with C++ Algorithms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P4%20Re-spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P4 Re spec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P6%20Bit%20Array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P6 Bit Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/C%2B%2B/CS-3370/P7%20Pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P7 Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_1" id="__nav_4_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 3450
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            CS 3450
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Composite%20Pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composite Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Course%20Outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Outline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Final
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Midterm%20Study%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Midterm Study Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/P3%20Decorator%20Re-spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P3 Decorator Re spec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/UML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Visitor%20Pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visitor Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%2011/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%208/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Week%209/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Design%20Patterns/CS-3450/Wrapping%20Up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wrapping Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Discrete 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_1" id="__nav_4_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 2300
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            CS 2300
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Class%20Logistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Logistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Exam%201%20Prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam 1 Prep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Exam%202%20Prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam 2 Prep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Exam%203%20Prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam 3 Prep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Extra%20Resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extra Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/FINAL%20REVIEW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FINAL REVIEW
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Logical%20Symbols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logical Symbols
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2002/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2003/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2004/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2007/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 07
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2008/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 08
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2009/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 09
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2011/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300/Week%2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2" id="__nav_4_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS 2300(Fall2024)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS 2300(Fall2024)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300%28Fall2024%29/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300%28Fall2024%29/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300%28Fall2024%29/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300%28Fall2024%29/Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Discrete%201/CS-2300%28Fall2024%29/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Week 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Random Learning Stuff
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Random Learning Stuff
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Teaching/Random%20Learning%20Stuff/Universal%20Expansion%2C%20Fractals%2C%20etc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Universal Expansion, Fractals, etc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layered-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layered Moves
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instant-movement-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instant Movement Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Modifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-liaisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Liaisons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-with-character-movement-component-cmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing with Character Movement Component (CMC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameplay-debugger-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gameplay Debugger Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physics-driven-character-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics-driven Character Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-and-known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations and Known Issues
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mover-plugin">Mover Plugin<a class="headerlink" href="#mover-plugin" title="Permanent link">&para;</a></h1>
+<p>Mover is an Unreal Engine plugin to support movement of actors with rollback networking, using the Network Prediction Plugin or Chaos Networked Physics. This plugin is the potential successor to Character Movement Component. The goal is to allow gameplay developers to focus on crafting motion without having to be experts in networking.</p>
+<p><strong>The Mover plugin is Experimental. Many features are incomplete or missing. APIs and data formats are subject to change at any time.</strong></p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>Add Mover and MoverExamples plugins to any existing project, or from a new Blank template project.</p>
+<p>Open the L_CharacterMovementBasics map, and activate Play-in-Editor (PIE).</p>
+<p>Recommended project settings to start:</p>
+<ul>
+<li>
+<p>Network Prediction / Preferred Ticking Policy: Fixed</p>
+</li>
+<li>
+<p>Network Prediction / Simulated Proxy Network LOD: Interpolated</p>
+</li>
+<li>
+<p>Network Prediction / Enable Fixed Tick Smoothing: true</p>
+</li>
+</ul>
+<p>This will have Mover objects simulating at a fixed rate, which is different than the variable rendering frame rate. The smoothing option provides visual compensation. Without it, you may feel like the movement simulation is rougher than the camera movement or skeletal animation.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>The MoverExamples plugin provides a collection of maps and actor examples, using a mixture of Blueprint and C++.</p>
+<p>Maps of interest:</p>
+<ul>
+<li>
+<p><strong>L_CharacterMovementBasics</strong> has a variety of terrain features and movement examples.</p>
+</li>
+<li>
+<p><strong>L_LayeredMoves</strong> is focused on demonstrating many layered move types, with varying options.</p>
+</li>
+<li>
+<p><strong>L_PathfindingMovement</strong> is focused on demonstrating Mover and different AI-driven movement with pathfinding including NavWalking mode.</p>
+</li>
+<li>
+<p><strong>L_PhysicallyBasedCharacter</strong> has an example of a physics-based pawn. See section below for more details.</p>
+</li>
+</ul>
+<p>Pawn/Actor Blueprints of interest:</p>
+<ul>
+<li>
+<p><strong>AnimatedMannyPawn</strong> is the simplest character and is based on the UE5 mannequin character used in the engine's template projects.</p>
+</li>
+<li>
+<p><strong>AnimatedMannyPawnExtended</strong> adds a variety of movement capabilities, such as dashing, vaulting, and ziplining.</p>
+</li>
+<li>
+<p><strong>PathFollowingMannyPawn</strong> is set up to support AI-driven pathfollowing as an example of nav-mesh movement.</p>
+</li>
+<li>
+<p><strong>BP_SplineFollowerPlatform</strong> shows a simple moving platform that predictably follows a defined path. This is an Actor, but not a Pawn.</p>
+</li>
+</ul>
+<h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
+<h3 id="movement-modes">Movement Modes<a class="headerlink" href="#movement-modes" title="Permanent link">&para;</a></h3>
+<p>A <strong>movement mode</strong> is an object that governs how your actor moves through space. It can both generate proposed movement and execute it. For example, walking, falling, climbing, etc. These modes look at inputs, decide how the character should move, and then attempt to actually move it through the world.</p>
+<p>There is always one and only one mode active a time.</p>
+<h3 id="layered-moves">Layered Moves<a class="headerlink" href="#layered-moves" title="Permanent link">&para;</a></h3>
+<p><strong>Layered moves</strong> represent temporary additional movement. For example, a constant force briefly launching up into the air, a homing force that moves you towards an enemy, or even animation-driven root motion.</p>
+<p>They only generate a proposed move, and rely on the active movement mode to execute it.</p>
+<p>Multiple layered moves can be active at a time, and their moves can be mixed with other influences. Their lifetime can have a duration or be instantaneous, as well as surviving transitions between modes.</p>
+<h3 id="instant-movement-effects">Instant Movement Effects<a class="headerlink" href="#instant-movement-effects" title="Permanent link">&para;</a></h3>
+<p><strong>Instant movement effects</strong> can affect movement state directly on a Mover-based actor during simulation without consuming time. They are only applied during a simulation tick and then removed.</p>
+<p>Multiple instant effects can be queued and will be executed sequentially as soon as possible. These execution windows occur at the beginning and end of each simulation step, including between substeps (for example, if the mode changed from falling to walking halfway through the sim tick).</p>
+<p>This could be used for teleporting, applying instantaneous launch velocities, or forcing a movement mode change.</p>
+<h3 id="movement-modifiers">Movement Modifiers<a class="headerlink" href="#movement-modifiers" title="Permanent link">&para;</a></h3>
+<p><strong>Movement Modifiers</strong> are used to apply changes that <em>indirectly influence</em> the movement simulation, without proposing or executing any movement, but still in sync with the simulation.</p>
+<p>Common uses would be for movement "stance" changes like crouching, stealth, etc. or other mechanics requiring a number of settings to change together.</p>
+<h3 id="transitions">Transitions<a class="headerlink" href="#transitions" title="Permanent link">&para;</a></h3>
+<p><strong>Transitions</strong> are objects that evaluate whether a Mover actor should change its mode, based on the current state. It can also trigger side effects when activated. They can set up to only evaluate when a particular mode is active, or they can be global and evalutated regardless of the current mode.</p>
+<p>The use of transitions is optional, with other methods of switching modes available.</p>
+<h3 id="backend-liaisons">Backend Liaisons<a class="headerlink" href="#backend-liaisons" title="Permanent link">&para;</a></h3>
+<p>A Mover-based actor requires a MoverComponent (an ActorComponent type) to operate. This is the main object that other systems interface with. Unlike many ActorComponents that use TickComponent to drive updating, Mover relies on an external "backend" to drive it.</p>
+<p>The liaison acts as an intermediary between the MoverComponent and the backend, passing function calls or events when it's time to produce input, advance the simulation, etc.  Current backend liaisons can interface with the Network Prediction Plugin or Chaos' Networked Physics system.  There is also a simple "standalone" liaison that can be used for non-networked play with kinematic movement.</p>
+<h3 id="other-concepts">Other Concepts<a class="headerlink" href="#other-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Composable Input and Sync State:</strong> Inputs are authored by the controlling owner, and influence a movement simulation step. Sync state is a snapshot that describes a Mover actor's movement at a point in time. Both inputs and sync state can have custom struct data attached to them dynamically.</p>
+</li>
+<li>
+<p><strong>Shared Settings:</strong> Collections of properties that multiple movement objects share, to avoid duplication of settings between decoupled objects.  The list is managed by MoverComponent based on which settings classes its modes call for. Your custom modes are not required to use Shared Settings and may approach settings differently, for example having a self-contained set of properties or referencing an external data table.</p>
+</li>
+<li>
+<p><strong>Persistent Sync State Data Types:</strong> There is almost always state data that you want to carry over from the previous frame, especially core movement data such as position.  Adding types to this array allows carry-over of types to automatically happen. Any state data <em>not</em> present on this list will have to be added every frame.</p>
+</li>
+<li>
+<p><strong>Input Production:</strong> Mover does not deal directly with Unreal's input systems such as Enhanced Input. Projects instead should translate input events into InputCmd structure(s) that get submitted just before simulation frames, via the ProduceInput interface.  AMoverExamplesCharacter's use of OnProduceInput shows a C++ method. The AnimatedMannyPawnExtended BP in the MoverExamples plugin adds additional inputs via the "On Produce Input" function implementation.</p>
+</li>
+<li>
+<p><strong>Trajectory Prediction:</strong> Mover provides a method to get samples that predict where an actor will end up in the future via the GetPredictedTrajectory function. This is useful in support of advanced animation techniques like Motion Matching.  As of 5.5, this is based on the most recent state and inputs. Options and customization will be expanded in the future.</p>
+</li>
+<li>
+<p><strong>Nav Mover Component:</strong> (optional) This is a component meant to house navigation movement specific settings and functionality. It is designed to live alongside the MoverComponent attached to the same actor.</p>
+</li>
+<li>
+<p><strong>Movement Utility Libraries:</strong> (optional) These are collection of functions useful for crafting movement, typically callable from Blueprints. When implementing the default movement set, we attempted to break the methods into these libraries where possible, so that developers can make use of them in their own movement.</p>
+</li>
+<li>
+<p><strong>Sim Blackboard:</strong> (optional) This is a way for decoupled systems to share information or cache computations between simulation ticks without adding to the official simulation state. Note that this system is not yet rollback-friendly.</p>
+</li>
+<li>
+<p><strong>Move Record:</strong> (optional) This is a mechanism for tracking combinations of moves and marking which ones should affect the final state of the moving actor.  For example, a movement that results in a character stepping up onto a short ledge consists of both horizontal and vertical movement, but we don't want the vertical movement to be included when computing the actor's post-move velocity. The record(s) for vertical movement would be marked as non-contributing.</p>
+</li>
+</ul>
+<h2 id="comparing-with-character-movement-component-cmc">Comparing with Character Movement Component (CMC)<a class="headerlink" href="#comparing-with-character-movement-component-cmc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Movement Modes</strong> are very similar in both systems, but modular in Mover</p>
+</li>
+<li>
+<p><strong>Layered Moves</strong> are similar to Root Motion Sources (RMS)</p>
+</li>
+<li>
+<p><strong>Instant Effects</strong> are a new concept, and are used to implement CMC features like launching and teleporting</p>
+</li>
+<li>
+<p><strong>Movement Modifiers</strong> are a new concept, and are used to implement CMC features like crouching</p>
+</li>
+<li>
+<p><strong>Transitions</strong> are a new concept, as a modular way to drive mode-changing evaluation logic</p>
+</li>
+<li>
+<p>Movement from modes and layered moves can be mixed together</p>
+</li>
+<li>
+<p>It is easier to add custom movement modes, even from plugins and at runtime</p>
+</li>
+<li>
+<p>The DefaultMovementSet in Mover is similar to the modes built in to CharacterMovementComponent (Walking, Falling, Flying, etc.)</p>
+</li>
+</ul>
+<p>The Mover plugin provides a DefaultMovementSet that is similar to the modes that CharacterMovementComponent provides. This movement set assumes a similar actor composition, with a Capsule primitive component as the root, with a skeletal mesh attached to it.</p>
+<p>MoverComponent does not require your actor class to derive from ACharacter.</p>
+<p>MoverComponent requires a root SceneComponent, but it does not have to be a singular vertically-oriented capsule or even a PrimitiveComponent. Developers are free to create Mover actors with no collision primitives if they wish.</p>
+<p>MoverComponent does not require or assume a skeletal mesh as the visual representation.</p>
+<p>In CMC, adding custom data to be passed between clients and server required subclassing the component and overriding key functions. The Mover plugin allows custom input and state data to be added dynamically at runtime, without customizing the MoverComponent.</p>
+<p>Networking Model:</p>
+<ul>
+<li>
+<p>In CMC, owning clients send a combination of inputs and state as a "move" at the client's frame rate. The server receives them and performs the same move immediately, then compares state to decide if a correction is needed and replies with either an acknowledgement of the move or a block of corrective state data.</p>
+</li>
+<li>
+<p>In Mover / Network Prediction, all clients and server are attempting to simulate on a shared timeline, with clients running predictively ahead of the server by a small amount of time. Clients author inputs for a specific simulation time/frame, and that is all they send to the server. The server buffers these inputs until their simulation time comes. After performing all movement updates, the server broadcasts state to all clients and the clients decide whether a correction (rollback + resim) is needed.</p>
+</li>
+</ul>
+<p>Unlike CMC, the state of the Mover actor is not directly modifiable externally at any time. For example, there is no Velocity property to directly manipulate. Instead, developers must make use of modes and layered moves to affect change during the next available simulation tick.  Additionally, player-provided inputs such as move input and button presses must be combined into a single Input Command for the movement simulation tick, rather than immediately affecting the Mover actor's state.  Depending on your project settings, you may have player input from several frames contributing to a single movement simulation tick.</p>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<h3 id="gameplay-debugger-tool">Gameplay Debugger Tool<a class="headerlink" href="#gameplay-debugger-tool" title="Permanent link">&para;</a></h3>
+<p>Visualization and state readout information is available through the Gameplay Debugger Tool (GDT). To activate the gameplay debugger tool, typically via the <strong>'</strong> key, and toggle the Mover category using the NumPad. The locally-controlled player character will be selected by default, but you can change this via GDT input and <strong>gdt.*</strong> console commands.</p>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<p>Output log information coming from the Mover plugin will have the <strong>LogMover</strong> category.</p>
+<h3 id="console-commands">Console Commands<a class="headerlink" href="#console-commands" title="Permanent link">&para;</a></h3>
+<p>There are a variety of useful console commands with this prefix: <strong>Mover.*</strong></p>
+<h2 id="physics-driven-character-example">Physics-driven Character Example<a class="headerlink" href="#physics-driven-character-example" title="Permanent link">&para;</a></h2>
+<p>Included in MoverExamples is a physics-driven version of the Manny pawn.  It is an experiment within this experimental plugin, and should be treated as such.  To try it out, open the L_PhysicallyBasedCharacter map in the MoverExamples plugin. Make sure you adjust your project's settings according to the text inside the map.</p>
+<p>Other MoverExamples pawns, and the CharacterMovementComponent, use a "kinematic" movement style where the pawn's shape is moved by testing the surroundings in an ad hoc manner. Responses to physics forces, and interactions with physics-simulated objects, are difficult to implement. With physics driving the movement, the pawn can realistically apply forces to other objects and have them applied right back.</p>
+<p>This physics-based character is NOT using the Network Prediction plugin. Instead, it is driven by the Chaos Networked Physics system, which has many similarities in how it operates. Under the hood, a Character Ground Constraint from the physics system handles performing the proposed motion that the Mover system generates. The physics simulation is running at a fixed tick rate, ahead of the game thread. As the simulation progresses, the game thread's character representation interpolates towards the most recent physics state.</p>
+<p>Notes:</p>
+<ul>
+<li>
+<p>Due to the async nature of the physics simulation, there is some additional lag time between player input and affecting the pawn's movement seen on screen.</p>
+</li>
+<li>
+<p>Other physics objects that the character interacts with should be set up for replication. Otherwise this will lead to differences between client and server.</p>
+</li>
+<li>
+<p>Interactions with moving non-physics objects will likely show poor results, due to ticking differences between the physics simulation and the rest of the game world.</p>
+</li>
+<li>
+<p>Various gameplay events may not be connected or are unreliable.</p>
+</li>
+<li>
+<p>Crafting customized movement may be less flexible without also using a modified physics constraint and solver.</p>
+</li>
+<li>
+<p>Physics-driven Mover actors are not well-synchronized with the movement of non-physics actors, such as those manually moved via gameplay scripting (or even Mover actors using NPP).</p>
+</li>
+</ul>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Should my project switch to Mover from CharacterMovementComponent?</strong>  This depends greatly on the scope of your project and will require some due diligence. The Mover plugin is experimental and hasn't gone through the rigors of a shipped project yet. There are many gaps in functionality, and little time has been spent on scaling/performance. Single-player or games with smaller character counts will be more feasible.</p>
+</li>
+<li>
+<p><strong>Does Mover fix synchronization issues between movement and the Gameplay Ability System?</strong> The short answer is no. GAS still has its own independent replication methods. The use of Network Prediction opens the door for GAS (or other systems) to integrate with Network Prediction and achieve good synchronization with movement.</p>
+</li>
+<li>
+<p><strong>What about single-player games?</strong> Mover is useful for single-player games as well, you just won't be making use of the networking and rollback features. Consider changing the project setting "Network Prediction / Preferred Ticking Policy" to "Independent" mode. This will make the movement simulation tick at the same rate as the game world.  You can even eliminate all NPP overhead by choosing "MoverStandaloneLiaisonComponent" as your "Backend Class" property on your actors' MoverComponents.  Physics-based pawns should also work well for single-player projects.</p>
+</li>
+</ul>
+<h2 id="limitations-and-known-issues">Limitations and Known Issues<a class="headerlink" href="#limitations-and-known-issues" title="Permanent link">&para;</a></h2>
+<p><strong>See also: Network Prediction Plugin's documentation</strong> Some of the Mover plugin's current limitations come from its dependency on the Network Prediction plugin. Please review its documentation for more info.</p>
+<p><strong>Ticking Ordering:</strong> All Network Prediction simulations tick before Unreal's world tick groups and always in a consistent order, making it difficult to implement mechanics where tight ticking dependencies are needed.</p>
+<p><strong>Fixed Tick Simulation + Variable Engine/Rendering Rate:</strong> When using Fixed Tick simulation with a variable Engine ticking (rendering) rate, you could go several rendered frames in between simulation ticks, or even have multiple simulation ticks occur during a single rendered frame. This has implications for things like input capturing, where you may need to combine several frames of sampled input into an input command for a single simulation tick.</p>
+<p>Additionally, when the simulation runs at a lower rate than rendering, the result is rough-looking movement that is unacceptable for most projects. The 5.5 release introduces options for visual smoothing when using Network Prediction. Set Project Settings' "Network Prediction / Enable Fixed Tick Smoothing" to true, and set your MoverComponent's "Smoothing Mode" to "Visual Component Offset".</p>
+<p><strong>Limited Blueprinting Support:</strong> Blueprint functionality isn't 100% supported yet. There are certain things that still require native C++ code, or are clunky to implement in Blueprints.</p>
+<p><strong>Arbitrary Gravity, Collision Shapes, etc. in the Default Movement Set:</strong> Although the core MoverComponent tries to make as few requirements as possible on the composition of the actor, the default movement set has more rigid assumptions.  For example, the default movement set currently assumes a capsule shape. Some features such as arbitrary gravity are not fully supported in all cases yet.</p>
+<p><strong>Animation of Sim Proxy Example Characters:</strong> Animation on another client's pawn (a sim proxy) may not be fully replicated during certain actions. This will be improved in a future release.</p>
+<p><strong>Forward-Predicted Sim Proxy Characters:</strong>  Characters controlled by other players are typically poor candidates for forward prediction, which relies on past inputs to predict future movement. Acceleration and direction changes, as well as action inputs like jumping, are unpredictable and will be the source of frequent mispredictions that can give the sim proxy character popping or choppy movement. Consider using Interpolated mode for the "Simulated Proxy Network LOD" project setting, which will give smooth results at the cost of some visual latency.</p>
+<p><strong>Cooked Data Optimization Can Lead to Missing Data:</strong> Cooked builds may have some MoverComponent data missing, resulting in a non-functional actor. Disable the actor's "Generate Optimized Blueprint Component Data" option (bOptimizeBPComponentData in C++).</p>
+<p><strong>MoverComponent Defaults Are Currently Focused on Characters:</strong> The current component has more API and data than would be required for Mover actors that are not Character-like. Our goal is to make a minimalist base component with slimmer API and property set, with a specialization for Character-like actors implemented separately as part of the default movement set.</p>
+<p><strong>Sim Blackboard Is Not Yet Rollback-Friendly:</strong> When rollbacks occur, the blackboard's contents are simply invalidated. Although the blackboard is useful for avoiding repeating computations from a prior frame, movement logic cannot always rely on it having a valid entry and should have a fallback.</p>
+<p><strong>Multiple Modifiers of the Same Type:</strong> Currently Mover expects there to be only one modifier of a given type active at a time. This can be worked around by overriding the Matches function and use more criteria than just the type, as long as that criteria is reflected by data included in the NetSerialize function.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

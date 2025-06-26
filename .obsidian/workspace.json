@@ -11,10 +11,26 @@
             "id": "a87ef76d72f61d74",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 1 - Intro and Searching.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Week 1 - Intro and Searching"
+            }
+          },
+          {
+            "id": "23aba0c4e6271014",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "332191680_925154381855281_2204844396748739005_n.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "332191680_925154381855281_2204844396748739005_n"
             }
           },
           {
@@ -31,7 +47,8 @@
               "title": "1. Positions"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,8 +213,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a87ef76d72f61d74",
+  "active": "23aba0c4e6271014",
   "lastOpenFiles": [
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 1 - Intro and Searching.md",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Introduction.md",
+    "332191680_925154381855281_2204844396748739005_n.jpg",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides/Schedule - Smr - 2nd Block -  2025.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides/AboutMe.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Search Help.md",
@@ -205,7 +225,6 @@
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Class Logistics.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 1.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 3.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 1 - Intro and Searching.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 2 - Sorting.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Mid Term Study Guide.md",
     "docs/index.md",
@@ -223,7 +242,6 @@
     "docs/Hobbies/Inner Kernal/Meeting 1.md",
     "docs/Professional/GradeKit/TUI Design.md",
     "docs/Hobbies/Game Dev/Unreal Engine/Untitled.md",
-    "docs/Hobbies/Game Dev/Unreal Engine/Plugins.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides",
     "docs/Hobbies/Linux/Instructions",
     "docs/Hobbies/Linux/Blog",

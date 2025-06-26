@@ -1,5 +1,3 @@
-I had a realization today
-
 Logs are the result of repeated (or iterated) division
 
 Exponents are the result of repeated multiplication
@@ -8,7 +6,7 @@ Products are the result of repeated addition
 
 Quotients are the result of repeated subtraction
 
-There are operations of a higher order after Logs and exponents.
+There are operations of a higher order after Logs and Exponents.
 
 After Exponents is Tetration or super exponentiation or repeated exponentiation, and after the log is inverse tetration or super log or repeated logarithm
 

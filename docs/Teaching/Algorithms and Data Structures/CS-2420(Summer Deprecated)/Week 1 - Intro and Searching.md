@@ -1,7 +1,6 @@
 ![[332191680_925154381855281_2204844396748739005_n.jpg]]
 
 ---
-
 #
 ## Project 1 overview
 Project 1 is just a simple introduction to implementing, testing, and submitting your projects. You'll do some way easy stuff, get some free points, and submit it. Seriously, it's 4 arithmetic functions and you get 100 points.
@@ -123,7 +122,7 @@ Recursion has 3 laws:
 
 When I think about recursion, and general problems in programming, I tend to think "what gets the job done?" or "what does the real work?"
 
-Whether you're working in some super abstract library or framework, or in the cloud, or in a recursive function, at the end of the day, some type of operation has to occur. Some work needs to get done. This is how I like to think about a base case in recursion. 
+Whether you're working in some super abstract library, in the cloud, or in a recursive function, at the end of the day, some type of operation has to occur. Some work needs to get done. This is how I like to think about a base case in recursion. 
 
 ---
 

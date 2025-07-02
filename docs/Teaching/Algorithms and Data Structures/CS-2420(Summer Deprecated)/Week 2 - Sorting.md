@@ -21,7 +21,7 @@ Can be used instead of doing a temp swap.
 ---
 ### Selection Sort
 
-Difficulty: Easy
+Difficulty: Easy 
 
 ---
 Selection sort works by having two trackers that walk through the array. The left side of the array is sorted, while the right is considered unsorted. 

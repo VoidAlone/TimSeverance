@@ -1,11 +1,13 @@
 ### About me
-- I'm 30
+- I'm 31
 - Background, WV, SP-BR, BYU-I, UVU, etc.
 - I play guitar, enjoyer of death metal. Fallujah, rivers of nihil, ne obliviscaris, black crown initiate, ulcerate, aegaeon, cynic, death. I like a lot of other music too though.
 - I love sushi, but really any dishes with rice I usually go crazy for
 - Slight anime nerd. Eva, HxH, Trigun, .hack, Akira, Ghost in the Shell, CSM, JJK, etc
 - R6 Siege, Elden Ring, The Finals
 - Reading, movies, hobby collection
+
+Movie, food, game, book whatever
 ### Class Structure
 - Each week, on the first day, we'll go over the project spec together, and start to think about the problems we'll need to solve. We might look at the test cases, potential pain points, function names, etc.
 - After reviewing the projects, we'll move on to the course material with the project details in mind. 

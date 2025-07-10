@@ -5,8 +5,10 @@ Iterator Pattern
 Magic Methods
 Class Organization
 Interfaces
+Sorting on linked lists
 
 ### Links
+[Python Iterator](https://wiki.python.org/moin/Iterator)
 
 [C++ Iterator](https://cplusplus.com/reference/iterator/)
 
@@ -18,6 +20,4 @@ Interfaces
 
 [Null Objects](https://refactoring.guru/introduce-null-object)
 
-
-
-
+[Sorting Linked Lists](https://www.youtube.com/watch?v=wZ8IJ4WPqWc&t=537s)

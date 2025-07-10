@@ -10,12 +10,15 @@ theme:
 Intro to Me
 ===
 
+
+
 <!-- column_layout: [1,1] -->
-<!-- column: 0-->
+<!-- column: 0 -->
 
 You can just just call me Tim.
 
 ---
+
 I have a Bachelor's in Computer Science
 
 I started teaching here at UVU right after graduating and have taught here for 3 years 
@@ -43,7 +46,7 @@ I'm was born and raised in West Virginia. I'm a first generation student.
 
 I had zero background in CS prior to UVU minus a failed attempt at figuring out C++ as a teenager.
 
-Grew up LDS and did a mission in Sao Paulo, Brazil (2013-2015)
+Did a mission in Sao Paulo, Brazil (2013-2015)
 
 Took the Amtrak out west to BYU-I for mechanical engineering.
 

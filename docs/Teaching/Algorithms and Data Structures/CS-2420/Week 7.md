@@ -1,13 +1,14 @@
 ### Study Guide
 ##### Data Structures
--What are ADTs and why do we use them?
--Why do we care about abstraction
+
+- What are ADTs and why do we use them?
+- Why do we care about abstraction
 
 ##### Big O
 11ish questions
--best, average, worst case
--constant time operations (one tricky question)
--composite runtime + bigO
+- best, average, worst case
+- constant time operations (one tricky question)
+- composite runtime + bigO
 
 ##### Searches
 

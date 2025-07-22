@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Hobbies/Linux/Neovim/C++ in Neovim.md",
+                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 5 - Trees.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++ in Neovim"
+              "title": "Week 5 - Trees"
             }
           },
           {
@@ -202,9 +202,10 @@
   },
   "active": "a87ef76d72f61d74",
   "lastOpenFiles": [
+    "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)/Week 1 - Day 1.md",
+    "docs/Hobbies/Linux/Neovim/C++ in Neovim.md",
     "docs/Hobbies/Linux/Neovim/Python in Neovim.md",
     "docs/Hobbies/Linux/Neovim/dotnet in Neovim.md",
-    "docs/Hobbies/Linux/Neovim/C++ in Neovim.md",
     "docs/Hobbies/Linux/Instructions/Gnome Settings Daemon.md",
     "docs/Hobbies/Linux/Blog/Getting into Linux.md",
     "docs/Hobbies/Linux/Blog/Linux Packages.md",
@@ -229,7 +230,6 @@
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 4.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Deprecated)/Week 3.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 1 - Intro and Searching.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Search Help.md",
     "332191680_925154381855281_2204844396748739005_n.jpg",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides",
     "docs/Hobbies/Linux/Instructions",

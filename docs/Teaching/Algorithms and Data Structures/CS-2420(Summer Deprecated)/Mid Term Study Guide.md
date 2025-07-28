@@ -1,36 +1,43 @@
 ##### Data Structures
--What are ADTs and why do we use them?
--Why do we care about abstraction. What does it allow us to do?
+- What are ADTs and why do we use them?
+
+- Why do we care about abstraction. What does it allow us to do?
 
 ##### Big O
 11ish questions
--best, average, worst case
--constant time operations (one tricky question)
--composite runtime + bigO
+
+- best, average, worst case
+
+- constant time operations (one tricky question)
+
+- composite runtime + bigO
 
 ##### Searches
 
 ##### Sorts
--Insertion Sort
+- Insertion Sort
 	swaps (how many, tricky question, how do we calculate the number of swaps -> (n-1) * n/2 or the sum of all possible swaps for a given iteration)
 	outer loop (how many times)
 	runtime
 
--Merge Sort
+- Merge Sort
 	runtime
 
--Quick Sort
+- Quick Sort
 	runtime
 
--Selection Sort
+-  Selection Sort
 	runtime
 	order
 
 ##### Linked List
--How to insert into a singly linked list
--Reversal
--What are nodes, and what do they do / contain
--how to traverse iteratively and recursively
+- How to insert into a singly linked list
+
+- Reversal
+
+- What are nodes, and what do they do / contain
+
+- how to traverse iteratively and recursively
 
 ##### Stacks
 3 Questions on infix/postfix

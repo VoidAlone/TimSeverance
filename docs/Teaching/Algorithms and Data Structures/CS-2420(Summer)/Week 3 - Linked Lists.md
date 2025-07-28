@@ -6,7 +6,6 @@ Magic Methods
 Class Organization
 Interfaces
 Sorting on linked lists
-
 ### Links
 [Python Iterator](https://wiki.python.org/moin/Iterator)
 

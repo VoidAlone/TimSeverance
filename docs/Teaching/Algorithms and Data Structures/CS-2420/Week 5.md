@@ -52,5 +52,3 @@ Recursive quicksort can be faster than recursive mergesort with the use of tail 
 
 Iterative versions can be used for both
 
-Zybooks mergesort copies the list, and then inserts the sorted list into a region of the original list. We don't really care that it's overriding because as we recursively split, if we're keeping track of which zones we're splitting into with i,j,k, we'll never override information we need.
-

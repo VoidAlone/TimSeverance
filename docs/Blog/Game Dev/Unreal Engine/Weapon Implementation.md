@@ -54,8 +54,6 @@ Weapon Table that different weapons/parts refer to
 - Handling
 - Stability
 - Aim Assist
-- Recoil
-- Mag Size
 - Rarity
 - Element
 
@@ -78,6 +76,23 @@ Subclass for RNG item? That way we can have designated drops for weapons and arm
 The pickup class previously was responsible for the combined logic of "picking up" and "spawning".
 
 Item spawner will now refer to data stored either in the gamemode or on the Character (probably easiest). It'll have a reference to items, their type, and be able to initialize and assign weapons, items, and armor.
+
+### BP_WeaponComponent Behavior
+
+**Setup Logic**
+
+GetOwner->AttachComponent
+
+Enhanced Input Setup for FPS Mapping Context
+
+Notify Animation Instance
+
+**Shoot Behavior**
+On IA_Shoot->
+Get Camera Rotation->Get Socket Location->Make Transform->Spawn Projectile->Play Sound->TriggerAnimationMontage...
+
+Trigger Animation
+Get Anim Instance->MontagePlay
 
 ## Weapon Ideas
 
@@ -125,18 +140,23 @@ Fusion Rifle
 
 Linear Fusion
 
-#### Energy Weapons
+#### Energy Weapons / Tracking Weapons
 
-Bee Gun
+Bee Gun (Half-life/Destiny: Shoots a stream of slow moving tracking projectiles)
 
-Plasma Gun
+Plasma Gun (Quake... Shoots lots of slow moving beams so that it creates a "stream" like trail of bullets)
 
-Volt Gun
+Volt Gun (Chain Lightning)
 
-Gauss Beam
+Gauss Beam ( Can't remember what I was thinking for this )
 
 #### Explosive Weapons
 
 Grenade Launcher
 
 RPG
+
+Sidewinder missle launcher
+
+
+

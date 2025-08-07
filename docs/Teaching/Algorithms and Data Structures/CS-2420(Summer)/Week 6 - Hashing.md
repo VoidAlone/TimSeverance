@@ -33,7 +33,7 @@ Data integrity (integrity can't be garanteed, but but corruption can be garantee
 
 ### Big Idea
 
-We're just mapping a value to a stored position based on a key. The easiest way to do this is by taking the value, mangling it in some way to correspond with an index or position in our structure, and then storing its associated value there.
+We're just mapping a value to a stored position based on a key. The easiest way to do this is by taking the key, mangling it in some way to correspond with an index or position in our structure, and then storing its associated value there.
 
 The most straight forward way to do this is by mapping the key to a numeric value, then modding it by the size of an array, which maps it to a position in the array.
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Blog/Neovim/C++ in Neovim.md",
+                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 6 - Hashing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 1 - Intro and Searching"
+              "title": "Week 6 - Hashing"
             }
           },
           {
@@ -216,15 +216,19 @@
   },
   "active": "a87ef76d72f61d74",
   "lastOpenFiles": [
-    "docs/Teaching/Algorithms and Data Structures/Logs, Exponents, and intuitive Big O.md",
-    "docs/Teaching/Data Engineering/Apache Airflow.md",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Search Help.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Mid Term Study Guide.md",
+    "docs/Teaching/Algorithms and Data Structures/Logs, Exponents, and intuitive Big O.md",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 12.md",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 11.md",
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 6 - Hashing.md",
+    "docs/Blog/Neovim/C++ in Neovim.md",
+    "docs/Teaching/Data Engineering/Apache Airflow.md",
     "docs/Teaching/Data Engineering",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 2 - Sorting.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 3 - Linked Lists.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 4 - Stacks, Queues, Postfix.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Introduction.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Search Help.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 1 - Intro and Searching.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 6.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 7.md",
@@ -236,16 +240,9 @@
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 4.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 3.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 2.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 12.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 11.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 10.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 1.md",
     "docs/index.md",
-    "docs/Teaching/Teaching.md",
-    "docs/Teaching/Sayings.md",
-    "docs/Teaching/Random Learning Stuff/Universal Expansion, Fractals, etc.md",
-    "docs/Hobbies/Linux/Blog/Linux Packages.md",
-    "docs/1. Positions.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides",
     "docs/Hobbies/Linux/Instructions",
     "docs/Hobbies/Linux/Blog",
@@ -255,18 +252,7 @@
     "docs/Hobbies/Programming",
     "docs/Hobbies/Music",
     "docs/Hobbies",
-    "docs/Academic",
-    "docs/Blog/Hobbies.md",
-    "docs/Excalidraw/Drawing 2025-01-22 13.50.21.excalidraw.md",
-    "docs/Excalidraw/Drawing 2025-01-22 15.44.08.excalidraw.md",
-    "docs/Excalidraw/Drawing 2025-01-22 14.50.00.excalidraw.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer Deprecated)/Week 5 - Trees.md",
-    "docs/Academic/Algorithms and Data Structures/CS-2420 (Summer)/Week 1 - Day 1.md",
-    "docs/Blog/Neovim",
-    "docs/Blog/Linux/i3",
     "332191680_925154381855281_2204844396748739005_n.jpg",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420 Slides",
-    "docs/Blog/Linux/Instructions",
     "docs/Images/Pasted image 20230908211202.png",
     "docs/Images/Pasted image 20230909184049.png"
   ]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 6 - Hashing.md",
+                "file": "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 7 - Graphs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 6 - Hashing"
+              "title": "Week 7 - Graphs"
             }
           },
           {
@@ -214,14 +214,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a87ef76d72f61d74",
+  "active": "fe3316df50d08315",
   "lastOpenFiles": [
+    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 6 - Hashing.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Search Help.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Mid Term Study Guide.md",
     "docs/Teaching/Algorithms and Data Structures/Logs, Exponents, and intuitive Big O.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 12.md",
     "docs/Teaching/Algorithms and Data Structures/CS-2420/Week 11.md",
-    "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)/Week 6 - Hashing.md",
     "docs/Blog/Neovim/C++ in Neovim.md",
     "docs/Teaching/Data Engineering/Apache Airflow.md",
     "docs/Teaching/Data Engineering",

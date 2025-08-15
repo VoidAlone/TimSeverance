@@ -77,6 +77,8 @@ dap.configurations.ada = {
 
 Since I'm using gcc which supports multiple languages, I can use gdb for a number of languages. This 100% works so far on C++. 
 
+Anyway, The adapter setup itself is pretty easy. id is gdb, we say that it's executable, the executable itself is gdb, and we pass the commands for interpreter (gcc just recently added dap support yay), eval command and pretty printing. We can now hook into C++ files with nvim-dap. 
+
 Then, you need to set up a configuration for building a c++ project, here's my overseer config. Follow overseer's instructions, and in lua>overseer>templates>user>... you can do something like cpp_build.lua. Here's my miminal task configuration
 
 ```lua
@@ -103,3 +105,4 @@ This is slightly different from the example given on their github just in that I
 ### Conclusion
 
 Well that's about it. I'll add more details for configuring each plugin, perhaps with my code. But for the most part, setting up debuggers and lsp in neovim is pretty straight forward in 2025, and I can only imagine it getting better (hopefully). 
+

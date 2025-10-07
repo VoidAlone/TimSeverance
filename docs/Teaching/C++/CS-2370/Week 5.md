@@ -3,6 +3,7 @@
 When we talked about indexing outside of an array, we wondered what would happen. At some point, we were able to iterate a fair degree outside of the bounds of our array, and then after enough passes, we hit a segmentation fault. A segmentation fault is when we try to access a "segment" that is protected by our system. This can happen when trying to access outside of the bounds of our program, or potentially when trying to access a dangling pointer or something. In other words, we asked for resources from our system, those resources were provided, and we're usually accidentally going out of bounds.
 
 C++ doesn't make any particular rules about accessing outside of the bounds of an array as it is considered to be undefined behavior. This is a level of the specification where no decisions were made on how to handle a specific feature of the language. In the same way that dividing by zero is undefined in mathematics, there is functionality that results in undefined behavior in C++. Treading into undefined territory is generally legal according to the compiler, but going into the wilderness can have disastrous consequences.
+
 ### Linking and compiling
 
 If we want to just manually compile, we can simply use the compile flag -c. This creates object files. 

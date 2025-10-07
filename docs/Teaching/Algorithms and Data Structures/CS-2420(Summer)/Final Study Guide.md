@@ -9,8 +9,7 @@ Mod hashing
 Chaining (state after insert/remove)
 Linear Probe (state after Insert/remove)
 Load Factor
-
-### BST
+### Trees
 
 Keywords
 

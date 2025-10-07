@@ -11,6 +11,8 @@ This year marked Neovim 0.11 which came with a huge change to the LSP API. It's 
 The current paradigm is the set up an lsp directory in your nvim root directory. I don't even do that, I keep it super simple with lsp-config
 
 ### Install lspconfig
+
+Lsp-config actually doesn't do much besides provide defaults for your lsp. You pretty much need to install lsps in the new neovim way.
 ### Install Language Servers
 ### Set up autocomplete
 ### Snippets

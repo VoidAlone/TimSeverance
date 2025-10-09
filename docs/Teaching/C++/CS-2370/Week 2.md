@@ -5,6 +5,14 @@ https://en.wikipedia.org/wiki/Binary_expression_tree
 
 Last time, we talked about evaluating expressions. In most languages, we have a few unary operators, several binary operators, and sometimes a ternary operator. Ternary kind of sucks to be honest. In most situations, favor readability. Just makes things clearer.
 
+Infix: 1+2
+Prefix: +12
+Postfix: 12+
+
+		()
+		() ()
+		()() ()()
+
 ### Type Conversions (2.13)
 
 Implicit conversions happen between types that can naturally be coerced into the other. Ints can be converted to floats, chars can be converted to ints, etc. The term coercion is not an official term, but you might see it every now and then, and it usually just refers to implicit conversions. We can do implicit conversions with assignments as well. 
@@ -21,7 +29,7 @@ This is the most common type of cast. Compile-time conversion. Similar to C styl
 Used for downcasting (Parent->Child) as opposed to upcasting (Child->Parent)
 
 ##### Const Cast
-Adds or removes constness depending on the state of constness.
+Adds or removes const-ness depending on the state of const-ness.
 
 ##### Reinterpret Cast
 Changes the pointer type.
@@ -65,7 +73,9 @@ For a binary expression, evaluates to true when one and only one of the operands
 
 Scientific notation for decimal numbers can be something like 
 
-300 = 3 x 10^2 
+301 = 3.01 x 10^2 
+
+0100
 
 https://en.wikipedia.org/wiki/Scientific_notation
 

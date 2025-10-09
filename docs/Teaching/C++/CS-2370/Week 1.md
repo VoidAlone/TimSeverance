@@ -4,6 +4,7 @@
 
 ```
 #include <iostream>
+#include "my_thing.h"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ int main(){
 
 int main(){
 	std::cout << "Hello World" << std::endl;
-	return 0
+	return 0;
 }
 ```
 
@@ -27,11 +28,28 @@ int main(){
 
 using std::cout;
 using std::endl;
+using std::cin;
+using std::string;
 
 int main(){
+	string x;
 	cout << "Hello World" << endl;
+	cin >> x;
 	return 0;
 }
+
+def my_class:
+	def __init__(self):
+		self.x = 5
+
+	def __str__(self):
+		return self.x
+
+...
+
+y = my_class()
+print(y)
+z = str(y)
 
 ```
 

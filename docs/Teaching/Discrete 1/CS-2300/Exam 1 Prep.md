@@ -34,7 +34,7 @@ A few questions will have answers that look the same unless you're careful and n
 
 Two questions will ask you to turn a sentence into its symbolic form. An important part to remember is that when talking about Nested Quantifiers, you have to account for the fact that if x and y have the same domain, you generally need to take into consideration that for whatever predicate, like x emailed y, x and y can refer to the same person or whatever thing in the domain. From 1.10, How could we use logic to express that everyone sent an email to everyone else without including the case that everyone sent an email to himself or herself? The idea is to use the conditional operation: (x ≠ y) → M(x, y).
 
-One logic puzzle where you have to infer something. Keep in mind that the two are making contradictory statements.
+One classic logic puzzle where you have to infer something. Keep in mind that the two are making contradictory statements.
 
 One will ask you to prove that something is even. This question should be answered in the theorem format, not the symbolic format. Be familiar with the types of proofs from chapter 2.
 

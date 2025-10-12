@@ -105,7 +105,7 @@ side falls of, and rotates back to the left-most side.
 So, in considering how to save bits and move them from one side to the other, we
 can think of the bits as two partitions.
 
-If we want to shift 10101 to the right by 2, you can think of the pre-shift bits
+If we want to shift **10101** to the right by 2, you can think of the pre-shift bits
 like this
 
 Pre-rotate:

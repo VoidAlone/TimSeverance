@@ -56,20 +56,19 @@ later though.
 
 ## Enum as a constant
 
-The other line that's weird is the NBITS portion. This is simple an old
-idiomatic way of declaring a named constant. Our NBITS is getting the number of
-bytes, then multiplying the byte count by the amount of bits in a byte, and this
-gets us the total number of bits in a given number like "unsigned long long."
+The other line that's weird is the NBITS portion. This is simply an old
+idiomatic way of declaring a named constant. NBITS gets the number of
+bytes, then multiplies the byte count by the amount of bits in a byte, and this
+gets us the total number of bits in a given type like "unsigned long long."
 We're just using this enum idiom to set that constant for us.
 
 ## Bits
 
-Okay this is the real part that matters. For most bit operations, remember to
-refer to chapter 3 in zybooks. However, there may be some hiccups, especially
-when figuring out the solution to rotate, which is the hardest function in this
-project.
+This is the real part that matters. For most bit operations refer to chapter 3 
+in zybooks. However, there may be some hiccups, especially when figuring out 
+the solution to rotate, which is the hardest function in this project.
 
-As an example, let's check out "void Set(int pos)"
+To start, let's check out "void Set(int pos)"
 
 ```cpp
 void set(int pos){
@@ -86,20 +85,20 @@ void set(int pos){
 Here is an example doing some bitwise operations in C++. You can
 easily turn this into a one-liner but for the sake of clearly understanding
 what's going on, I'm going to write it out line by line. We suppose bits is set to
-something like 1101. We want to set the first (0 indexed) bit with the least
-significant bit being 0th indexed. We then create a 1 out of the type we're
-representing bits with, bit shift to get our mask. In this case, we want to set
+something like 1101. We want to set the 1st bit with the least
+significant bit (right-most) being 0th. We then create a 1 out of the type we're
+representing bits with, and bit shift to get our mask. In this case, we want to set
 bit at index 1 to be 1, so we move that 1 over to position 1. We then 'or' the
 bits with the mask and that sets the bit we want.
 
 ## Rotate
 
-I won't give you code for this one (it's just a few lines and pretty easy)
+I won't give you code for this one (it's just a few lines and not too bad)
 
 However, the logic can be tricky to work out. Consider a right rotation. If we
 want to rotate bits to the right, some of them will fall off the right side, 
 and will have to be moved in from the left. 00101 shifted right by one should
-become 10010. Every bit is shifted right by 1, and the 1 bit on the right most
+become 10010. Every bit is shifted right by 1, and the 1 bit on the right-most
 side falls of, and rotates back to the left-most side.
 
 So, in considering how to save bits and move them from one side to the other, we
@@ -150,6 +149,9 @@ The bits that "fell off" were our "01" bits. So, we need to push them over to
 fill in the gap left by moving our previous bits to the right by 2. Refer to the
 chart above if that part isn't clear.
 
+Now, these two bit representations, 01000 and 00101 can be or'd together to get
+our resulting rotated number.
+
 ### Negative rotates
 
 Left and right rotates are equivalent, we just have to compensate for the
@@ -166,4 +168,5 @@ n + NBITS = rot -> -3 + NBITS = 2
 
 So, for a negative rotation (e.g. you passed -3 to rotate) you can apply the same 
 logic as above, just perform this conversion operation on your position 
-parameter, n, first e.g. n += NBITS;
+parameter, n, first e.g. n += NBITS; That will get you the correct number so you
+can still perform a right rotate.

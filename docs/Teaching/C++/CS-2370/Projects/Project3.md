@@ -116,7 +116,7 @@ Pre-rotate:
 
 The left side represents the bits we'll keep, and the right side represents the
 bits that will fall off. We're shifting right by two, so 101 will occupy the
-right partition, and 01 will occupty the left after our rotate is complete.
+right partition, and 01 will occupy the left after our rotate is complete.
 
 Post-rotate:
 
@@ -165,5 +165,5 @@ of it like this: Where NBITS = 5, and n = -3
 n + NBITS = rot -> -3 + NBITS = 2
 
 So, for a negative rotation (e.g. you passed -3 to rotate) you can apply the same 
-logic as above, just perform this converstion operation on your position 
+logic as above, just perform this conversion operation on your position 
 parameter, n, first e.g. n += NBITS;

@@ -1,3 +1,67 @@
+### Setting Up an Environment
+
+For Windows:
+
+Windows is a bit of a pain to set up a proper C++ environment. You have a few options 
+
+1) WSL
+2) An IDE with an environment (Visual Studio, JetBrains, etc.)
+3) MSYS2 
+
+A really straightforward option is to just use WSL. You can install any linux distro of your choosing and then with that distro's package manager, you can install all the C++ tooling you like. 
+
+The next straightforward option is to just use Visual Studio or similar IDEs that provide all the necessary dependencies, tooling, environment variables etc to develop, compile, and run a C++ project.
+
+The third option is to use MSYS2 or similar products. MSYS2 is a compatibility layer that provides a unix-like environment for windows. It provides bash shell and does the necessary translation between unix-like and windows commands and file paths. It comes with the pacman package manager, and is fairly nice for C++ dev on windows. It's a solid alternative to WSL. 
+
+With the WSL or MSYS2 option, you will be able to set up whichever text editor you prefer. So for those of you who prefer VSCode or whatever, this will likely be your best option.
+
+Here is a link for setting up VSCode for C++ development using the GCC (GNU Compiler Collection) with the mingw toolchain via MSYS2 (Compatibility Layer)
+
+[Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw)
+
+If you have the opportunity to use Linux, your development experience will be significantly more straightforward and unambiguous. Microsoft and XCode tend to obfuscate a lot of the tooling in a way that just ends up confusing students most of the time.
+
+### Compilers
+
+There are 3 mainline options you can pick for compilers.
+
+1) GCC
+2) LLVM
+3) MSVC
+
+**GCC (GNU Compiler Collection)**
+This is a wonderful compiler collection brought to you GNU (GNU's Not Unix). It comes with compilers for Fortran, Ada, Objective-C, C, C++, and D. Do not confuse GCC as the collection with gcc (the C compiler) and g++ (the C++ compiler). gcc and g++ are both part of GCC. These compilers are fairly standard, and have really great performance.
+
+**LLVM**
+It used to stand for Low Level Virtual Machine, but no longer means that, and is now a general purpose framework that modularizes frontend and backend components for compilers. Languages implemented in LLVM provide a front end that translates to an IR (intermediate representation) that is then handled in the backend. Clang is the C++ compiler for the LLVM project.
+
+**MSVC**
+This is microsoft's compiler. I don't know much about this one, other than it obviously has its own libraries and quirks. It has different preprocessor macros, and requires microsoft's tooling to use (Visual Studio). Ew.
+
+### Tooling
+
+I want to talk about the tools of your environment.
+
+In order to have a decent development experience you need several tools. Many of you who have used JetBrains, Visual Studio, or VSCode will either have all of the tooling already built in, or will download some extension that magically makes your dev experience nice.
+
+You will find that C++ is a complex beast when it comes to tooling, and so it helps to be aware of what components you're using.
+
+**1) Syntax highlighting**
+You will generally have a tool like treesitter that provides general syntax highlighting. This just makes it visually easier to read and colors different identifiers and keywords.
+
+**2) Language Server**
+A language server is what provides things like in-editor error messages, red squiggles, code suggestions, etc. It usually provides some capability to autocomplete based off of context as well. Microsoft's general language server solution for their products has generally been "Intellisense." Microsoft developed the LSP (Language Server Protocol) which provides a unified way for language developers and text editors to implement a language server that can talk to a text editor. There are a few language servers available for C++, but the generally best language server is Clangd from the LLVM project.
+
+**3) Debug Adapter**
+Debug Adapters are also a technology brought to us by Microsoft (Debug Adapter Protocol) and again provides a unified way for language developers and text editors to communicate in a standard way. In my case, I will be using lldb also from the llvm project. GCC provides its own debugger, GDB, but its capabilities as a debug adapter are limited (particularly with integrated terminal interaction for standard input)
+
+**4) Task Runners**
+Task runners come in many forms especially for C++. Microsoft once again has implemented a somewhat standardized way of running tasks. Running a task usually involves setting compiler flags for things like warnings, compiling, linking, assembling etc. Once a task has been run, a debugger (or you from the command line) can then execute the compiled program. 
+
+Most of this is bundled all together in tools like Visual Studio, or in the C++ extension in VSCode. You don't really need to think a lot about how these things work if you're using those tools, which can really hurt you when they stop working or aren't working correctly. Being equipped with this knowledge will help you as you implement your projects. 
+
+Most of the projects we will do in this class are not very complex. The difficulty will come from the novelty of the language, and from your unfamiliarity with the tooling.
 ### Day 1
 
 #### Anatomy of a basic C++ program
@@ -91,9 +155,8 @@ Const
 Auto
 
 
-###  Compiling C++
+###  Compiling with C++
 
-https://code.visualstudio.com/docs/cpp/config-mingw
 https://bytes.usc.edu/cs104/wiki/gcc
 
 

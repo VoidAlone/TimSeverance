@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Teaching/C++/CS-2370/Introduction.md",
+                "file": "docs/Teaching/C++/CS-2370/Week 9 - Inheritance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction"
+              "title": "Week 9 - Inheritance"
             }
           }
         ]
@@ -187,17 +187,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "756cbe575c58b9f7",
+  "active": "fe3316df50d08315",
   "lastOpenFiles": [
+    "docs/Teaching/C++/CS-2370/Exams/Exam 1 Study Guide.md",
+    "docs/Teaching/C++/CS-2370/Introduction.md",
+    "docs/Teaching/C++/CS-2370/Exams",
     "docs/Teaching/C++/CS-2370/Memes/RDT_20230214_0722345456059206149726807.jpg",
     "docs/Teaching/C++/CS-2370/Memes/RDT_20240313_2249501554179169489782974.jpg",
-    "docs/Teaching/C++/CS-2370/Introduction.md",
     "docs/Teaching/C++/CS-2370/Memes",
     "docs/Teaching/C++/CS-2370/Week 5 - C++ Spec and Structure.md",
     "docs/Teaching/C++/CS-2370/Week 2 - Expressions and Common Operations.md",
     "docs/Teaching/C++/CS-2370/Week 1 - Environments and Intro to C++.md",
     "docs/Teaching/C++/CS-2370/Week 6&7 (Ask forgiveness instead of permission).md",
-    "docs/Teaching/C++/CS-2370/Multithreading.md",
+    "docs/Teaching/C++/CS-2370/Week 12 - Multithreading.md",
     "docs/Teaching/C++/CS-2370/Week 8 - Objects.md",
     "Excalidraw/Drawing 2026-01-05 21.07.57.excalidraw.md",
     "docs/index.md",
@@ -227,7 +229,6 @@
     "docs/Teaching/Algorithms and Data Structures/CS-2420",
     "docs/Teaching/Algorithms and Data Structures/CS-2420(Summer)",
     "docs/Hobbies/Programming",
-    "docs/Hobbies/Music",
     "docs/Images/Pasted image 20230908211202.png",
     "docs/Images/Pasted image 20230909184049.png"
   ]

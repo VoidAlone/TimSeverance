@@ -1,8 +1,8 @@
-# Control Flow and Enums
+## Control Flow and Enums
 
 I'm not too sure what to do about this particular section. This stuff is not overly complex but has a tendency to get breezed over if not handled carefully.
 
-## Control Flow
+### Control Flow
 
 We have a few simple mechanisms for controlling logic in a program.
 
@@ -39,6 +39,6 @@ I don't like reading these. Cool for one liners, but overall just a bit too ters
 
 **Switch**
 
-## Enums
+### Enums
 
 

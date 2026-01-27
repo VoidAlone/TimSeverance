@@ -1,6 +1,6 @@
-# Objects
+## Objects
 
-## What is OOP?
+### What is OOP?
 
 Alan Kay, creator of smalltalk, conceptualized Object Orientation. Over the span
 of his career, he gave several talks and memos highlighting his regret of ever
@@ -26,7 +26,7 @@ information, and importantly, the hiding of that information, we MUST rely on
 messages to get these jobs done. Encapsulation is the core of OOP, and so
 Messages work in tandem with encapuslation to make objects work.
 
-## Dispatching
+### Dispatching
 
 Very briefly, dispatching is the mechanism in which a method is determined to be
 called. It's largely the mechanism that allows us to have runtime polymorphism.
@@ -68,9 +68,9 @@ Overloading is not dispatching, though they are related.
 
 [Function overload vs override](https://www.geeksforgeeks.org/cpp/function-overloading-vs-function-overriding-in-cpp/)
 
-## Templates and Generic Programming
+### Templates and Generic Programming
 
-## Resources
+### Resources
 
 https://www.codementor.io/@michaelsafyan/object-oriented-programming-in-c-du1081gw2
 

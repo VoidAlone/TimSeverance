@@ -1,6 +1,6 @@
-# Containers, Functions, and References
+## Containers, Functions, and References
 
-## Vectors
+### Vectors
 
 So at this point, you've already handled project 5.33 (Rosters using Vectors)
 
@@ -16,7 +16,7 @@ Vectors are something of a dynamic array, which we'll implement later. Before th
 
 [Templates in C++ - Microsoft](https://learn.microsoft.com/en-us/cpp/cpp/templates-cpp?view=msvc-170)
 
-## Functions
+### Functions
 
 Some key things to be aware of for Functions:
 
@@ -25,13 +25,13 @@ Some key things to be aware of for Functions:
 3) In vs Out parameters
 4) How are arrays passed to a function?
 
-### **Forward Declaration**
+#### **Forward Declaration**
 
 We've done this regularly in the form of global variables and whatnot throughout the semester. You'll see with templates coming up that we're making use of the same mechanism. The idea though is that in order to compile, we need to make assurances that a symbol we want to use exists somewhere. We can make this work by simply declarating the thing first. This can come in the form of declaring variables and functions.
 
 By forward declaring we're just saying "hey, you can count on this to exist later on during run time. For now, during compilation, just assume that it's all good."
 
-### **Parameter Passing**
+#### **Parameter Passing**
 
 This is going to be the biggest thing we talk about honestly
 
@@ -70,7 +70,7 @@ You will frequenly hear PBR parameters as out parameters. This is because whatev
 
 The best option for most scenarios is PBCR. We'll address this more in class but it has very desirable properties.
 
-#### What is a reference?
+##### What is a reference?
 
 A reference, also referred to as an alias, is similar to some kind of const pointer. There are neat compiler tricks and things to make them work efficiently, but references work similar to pointers by being bound to an address rather than data.
 

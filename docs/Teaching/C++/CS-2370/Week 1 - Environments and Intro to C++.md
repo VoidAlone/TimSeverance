@@ -154,7 +154,47 @@ Ints
 Const
 Auto
 
+0000 0001
+0000 0001
+0000 0010
 
+1 = -
+0 = +
+1 000 0000 = 128 unsigned
+1 000 0000 = -0 signed 1s complement
+1 000 0010 = -2 one's complement
+
+2's complement
+To convert
+Flip all the bits, and add 1 to the number
+
+0000 0010 - 2s complement
+1111 1101 -> Add 1 -> 1111 1110 = -2
+
+-2 + 2
+
+  1111 1110
+  0000 0010
+ 0000 0000
+
+*Floating Point*
+
+0000
+
+99.99
+
+0001 << 1 = 0010 << 1 = 0100
+
+
+| Sign | Exponent (Bias of 127 for 32 bit) |     | Mantissa |
+| ---- | --------------------------------- | --- | -------- |
+| 1    | 0000                              |     | 11000000 |
+|      |                                   |     |          |
+.11000000000000000000000
+
+0000.0000
+
+1.125 x 10^3
 ###  Compiling with C++
 
 https://bytes.usc.edu/cs104/wiki/gcc

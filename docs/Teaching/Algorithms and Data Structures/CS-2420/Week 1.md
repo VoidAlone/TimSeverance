@@ -1,7 +1,7 @@
 ## Notes for Module 1
 
 ### Intro to algorithms
-Algorithms describe steps to solve some problem. Baking a cake, directions to CS401, or sorting lists can all use algorithms. Algorithms can be expressed in natural language, pseudocode, formal languages, whatever.
+Algorithms describe steps to solve some problem. Baking a cake, directions to CS403, or sorting lists can all use algorithms. Algorithms can be expressed in natural language, pseudocode, formal languages, whatever.
 
 Computational problems are problems that can be solved with computers given some input. We use algorithms to help solve these. Some algorithms are more efficient than others, as in they take less time or space to solve a problem, or they might be inefficient but easy to implement. There are lots of different ways to solve problems, some are better than others, but most of the time they have different pros and cons.
 
@@ -20,7 +20,7 @@ Data structures are a way to organize, store, and perform operations on data.
 
 Data structures require specific operation to be performed on their data. This means that there are algorithms specific to different data structures. 
 
-For example, inserting an item into a linked list for example requires a very different algorithm than inserting into an array.  
+For example, inserting an item into a linked list requires a very different algorithm than inserting into an array.  
 
 Array insertion generally requires some variation of the following
 1. Create new array\[size + 1\]
@@ -60,22 +60,18 @@ Space complexity include input data and additional memory allocation. Auxillary 
 N represents input
 k represents some constant number
 
+### C++
 
-
-
-
+https://code.visualstudio.com/docs/cpp/config-mingw
 ### Topics to hit
 #### 08/24/22
 1. Memes / Pictures
-2. Make sure everyone has zybooks, discord, python + modules
+2. Make sure everyone has zybooks, discord
 3. Questions
-4. Jupyter Notebooks
-5. Recursion / Compilation
-6. Fibonacci sequence
-7. BigOFib
-8. Space and Time Complexity
-9. Freestyle Coding (What did I mean by this? Getting better at coding? Coding on the fly? The dangers of not having a set plan? The benefits of flying freely and just experimenting?)
-10. Orders of Ignorance / Take this Fish
-11. Nothing is real. It's all made up. Nothing is sacred. We create structures to make sense of the world around us. Different paradigms make sense in different contexts. Don't lock yourself into one way of thinking.
-12. Recursion, Classes, dunder/magic methods
-
+4. Recursion / Compilation
+5. Fibonacci sequence
+6. BigOFib
+7. Space and Time Complexity
+8. Freestyle Coding (What did I mean by this? Getting better at coding? Coding on the fly? The dangers of not having a set plan? The benefits of flying freely and just experimenting?)
+9. Nothing is real. It's all made up. Nothing is sacred. We create structures to make sense of the world around us. Different paradigms make sense in different contexts. Don't lock yourself into one way of thinking.
+10. Recursion, Classes

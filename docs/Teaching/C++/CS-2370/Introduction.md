@@ -23,10 +23,6 @@ NOTE: Semantics are crucial, but often debated. When we use certain words, we as
 - I don't really go over slides. We'll talk about relevant class material, and any side topics that you all want covered. 
 - Since this course has biweekly modules, we'll generally talk about relevant material for the first week, and then cover projects and labs in the second week.
 
-### Warnings
-- I do not make the coursework. I am an adjunct, not a mentor. Let me repeat that, I don't make the coursework, or any of the material. I'm here to deliver it to you, help you understand it, and guide you through the work. Someone had the audacity to complain about the fact that I didn't create my own material when I explained that day 1 a few semesters ago. I'm also not in control of zybooks. If there are issues, it's an administrative issue that comes from zybooks or the department. All I can do to fix things is send emails and hope people respond quickly. So let it be written, that I don't make the material.
-- If attendance gets too low, I will enforce an attendance policy. I hate basing grades off attendance, but the overall class experience diminishes greatly if people aren't coming to class. Class is better with you there. 
-
 ### Success
 ![[RDT_20230214_0722345456059206149726807.jpg]]
 

@@ -1,5 +1,5 @@
 ### Topics to hit
-#### 08/29/22
+#### Week 2 Day 1
 1. Memes
 2. Questions
 3. Recursion
@@ -11,12 +11,10 @@
 	- Difference between Big O and Complexity
 	- Linear search
 	- Analyze time and space complexity
-6. Show pytest / pylint
-7. Search functions for project 1
-8. Show compilation with compiler and VM?
+5. Search functions for project 1
 
 
-#### 08/31/22
+#### Week 2 Day 2
 1. Memes
 2. Take this fish
 3. Binary Search vs Fibonacci Function

@@ -16,6 +16,7 @@ Arrays are just dedicated start and end points in memory. So it doesn't matter n
 Quick and Merge sorts both use a main function, with a helper function that does most of the heavy lifting.
 
 #### Quick Sort
+
 A collection is sorted when all elements to the left of a selected item value is less than or equal to that item, and when all elements to the right are greater than or equal to that item.
 
 Splits the sort space with a pivot point and recursively sorts.  

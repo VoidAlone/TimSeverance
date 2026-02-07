@@ -85,12 +85,14 @@
             "id": "756b5dc6396ec5d5",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2026-01-22 11.50.43.excalidraw.md"
+                "file": "docs/Teaching/C++/CS-2370/Exams/Exam 1 Study Guide.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-01-22 11.50.43.excalidraw"
+              "icon": "lucide-file",
+              "title": "Exam 1 Study Guide"
             }
           }
         ],

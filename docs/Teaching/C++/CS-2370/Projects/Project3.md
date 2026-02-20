@@ -2,6 +2,8 @@
 
 ## Friend keyword
 
+**Summary: Provides private member access to foreign classes and functions**
+
 The friend keyword is used for when you're overloading a non-member function 
 for your class, or providing general access to another class. This is essential 
 because we're literally defining the function of another class. For example, 
@@ -27,6 +29,8 @@ that private info.
 [C++ Friend (Microsoft docs)](https://learn.microsoft.com/en-us/cpp/cpp/friend-cpp?view=msvc-170)
 
 ## IType (lead up to templates/generics)
+
+**Summary: Introductory way to stay DRY (Don't Repeat Yourself) before templates.**
 
 IType is a simple lead up to templates. The idea is code reuse. Basically, it's
 kind of a pain at best to modify code all over the place, and dangerous at
@@ -72,6 +76,8 @@ later though.
 
 ## Enum as a constant
 
+**Summary: Idiomatic style for constants.**
+
 The other line that's weird is the NBITS portion. This is simply an old
 idiomatic way of declaring a named constant. NBITS gets the number of
 bytes, then multiplies the byte count by the amount of bits in a byte, and this
@@ -81,6 +87,8 @@ We're just using this enum idiom to set that constant for us.
 So, NBITS = sizeof(IType) * 8 -> 4Bytes * 8 -> 32Bits for an int.
 
 ## Bits
+
+**Summary: Refer to the table in 3.11 for how to complete bit operations**
 
 This is the real part that matters. For most bit operations refer to chapter 3.11
 in zybooks. However, there may be some hiccups, especially when figuring out 

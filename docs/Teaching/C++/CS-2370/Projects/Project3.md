@@ -2,12 +2,13 @@
 
 ## Friend keyword
 
-The friend keyword is used for when you're overloading a non-member function for
-your class. This is essential because we're literally defining the function of
-another class. For example, the equality operators or ostream output operator
-are all functions defined in other libraries. Since these functions do not have
-definitions for our object, we need to overload those function library methods
-so that they can handle our object. 
+The friend keyword is used for when you're overloading a non-member function 
+for your class, or providing general access to another class. This is essential 
+because we're literally defining the function of another class. For example, 
+the equality operators or ostream output operator are all functions defined in 
+other libraries. Since these functions do not have definitions for our object, 
+we need to overload those function library methods so that they can handle our 
+object. 
 
 The big thing is that since it's relevant to our class, we define it in the body
 of our class. Make no mistake, it doesn't belong TO our class though. We're
@@ -18,7 +19,7 @@ private. If such data is private, the functions that we overload DON'T have
 access to our class data. Again, we're overloading ANOTHER class's functions to
 be able to handle our class. As such, it doesn't have access to our data.
 
-Friend simply designates another class/class method as being able to access
+Friend simply designates another class/class-method as being able to access
 private data. Another class can't declare itself a friend and suddenly gain
 access to that private data. The class in question has to be willing to provide
 that private info.
@@ -43,7 +44,22 @@ Imagine if you wanted to use ints instead, but now you have to go through and
 replace every instance where ulong is. Let's say you want to switch it back.
 Well, we also use ints for other things like indices, and parameters, so it
 starts to become confusing as to which ints we actually want to change to ulong,
-       and which are supposed to stay ints.
+and which are supposed to stay ints.
+
+```cpp
+Bits(int b);
+void at(int p);
+```
+
+In the example above, if we wanted to change the int type to a unsigned long
+long, which parameters do we change? It can become confusing.
+
+```cpp
+Bits(IType b);
+void at(int p);
+```
+
+This is muhc more clear about intent.
 
 We're still limited though, if we want to be able to support bit operations on
 ints AND ulongs, we have to define two separate header files to account for
@@ -62,9 +78,11 @@ bytes, then multiplies the byte count by the amount of bits in a byte, and this
 gets us the total number of bits in a given type like "unsigned long long."
 We're just using this enum idiom to set that constant for us.
 
+So, NBITS = sizeof(IType) * 8 -> 4Bytes * 8 -> 32Bits for an int.
+
 ## Bits
 
-This is the real part that matters. For most bit operations refer to chapter 3 
+This is the real part that matters. For most bit operations refer to chapter 3.11
 in zybooks. However, there may be some hiccups, especially when figuring out 
 the solution to rotate, which is the hardest function in this project.
 
@@ -84,22 +102,27 @@ void set(int pos){
 
 Here is an example doing some bitwise operations in C++. You can
 easily turn this into a one-liner but for the sake of clearly understanding
-what's going on, I'm going to write it out line by line. We suppose bits is set to
-something like 1101. We want to set the 1st bit with the least
-significant bit (right-most) being 0th. We then create a 1 out of the type we're
-representing bits with, and bit shift to get our mask. In this case, we want to set
-bit at index 1 to be 1, so we move that 1 over to position 1. We then 'or' the
-bits with the mask and that sets the bit we want.
+what's going on, I'm going to write it out line by line. 
+
+1) We suppose bits is set to something like 1101. We want to set the 1st bit 
+with the least significant bit (right-most) being 0th. 
+
+2) We then create a 1 out of the type we're representing bits with (IType), 
+
+3) Then we bit shift to get our mask. In this case, we want to set bit at index 
+1 to be 1, so we move that 1 over to position 1. 
+
+4) We then 'or' the bits with the mask and that sets the bit we want.
 
 ## Rotate
 
-I won't give you code for this one (it's just a few lines and not too bad)
+I won't give you code for this one (it's just a few lines)
 
-However, the logic can be tricky to work out. Consider a right rotation. If we
-want to rotate bits to the right, some of them will fall off the right side, 
-and will have to be moved in from the left. 00101 shifted right by one should
-become 10010. Every bit is shifted right by 1, and the 1 bit on the right-most
-side falls of, and rotates back to the left-most side.
+Consider a right rotation. If we want to rotate bits to the right, some of them 
+will fall off the right side, and will have to be moved in from the left. 00101
+shifted right by one should become 10010. Every bit is shifted right by 1, and 
+the 1 bit on the right-most side falls of, and rotates back to the left-most 
+side.
 
 So, in considering how to save bits and move them from one side to the other, we
 can think of the bits as two partitions.
@@ -170,3 +193,12 @@ So, for a negative rotation (e.g. you passed -3 to rotate) you can apply the sam
 logic as above, just perform this conversion operation on your position 
 parameter, n, first e.g. n += NBITS; That will get you the correct number so you
 can still perform a right rotate.
+
+### Alternate ways
+There are a number of ways that you can do these rotations, and quite frankly,
+there are several ways you can do any of these bitwise operations for the
+project. An alternative to the method I proposed above would be to simply
+create a bit mask of the bits that are going to fall off, preserve them,
+and then shift them appropriately so that they can be put into the correct
+position. The table at the bottom of zybooks 3.11 provides an example of this
+method.

@@ -1,3 +1,4 @@
+```py
 '''
 Note that dunder methods in python and operator overloads in C++ more or less do the same thing
 
@@ -20,3 +21,4 @@ def main():
     ex2 = Ex()
 
     print(ex1 == ex2)
+```

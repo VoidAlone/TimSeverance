@@ -1,3 +1,4 @@
+```cpp
 #include "dynarray.h"
 #include <iostream>
 
@@ -26,3 +27,4 @@ int main(){
 	dynarray d1 = dynarray();
 	dynarray d2 = d1;
 }
+```

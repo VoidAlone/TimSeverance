@@ -30,15 +30,15 @@ The following will be the result of copying data from the region pointed to by d
 
 ### Initial State
 
-STACK
-0x3001      dynarray
-0x3002          data*: 0x5AF1
-0x3003          grow()
-0x3004              temp*: 0x5CF1
-
-HEAP 
-0x5AF1\[ 0
-0x5AF2\] 1
+STACK  
+0x3001      dynarray  
+0x3002          data*: 0x5AF1  
+0x3003          grow()  
+0x3004              temp*: 0x5CF1  
+  
+HEAP   
+0x5AF1\[ 0  
+0x5AF2\] 1  
 
 --- 
 

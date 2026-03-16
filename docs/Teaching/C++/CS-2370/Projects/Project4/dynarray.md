@@ -1,4 +1,6 @@
-/*
+```cpp
+
+`/*
  *	this file is intentionally incomplete, and is just an artifact from class
  *	when we were talking about a bunch of concepts. For more complete explanations
  *	refer to the md docs 
@@ -66,3 +68,4 @@ public:
 	}
 
 };
+```

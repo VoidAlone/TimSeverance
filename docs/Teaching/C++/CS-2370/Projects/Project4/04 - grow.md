@@ -36,7 +36,7 @@ The following will be the result of copying data from the region pointed to by d
 
 STACK  
 0x3001      dynarray  
-0x3002          data*: 0x5AF1  
+0x3002          data\*: 0x5AF1  
   
 HEAP   
 0x5AF1\[ 0  
@@ -48,9 +48,9 @@ HEAP
 
 STACK  
 0x3001      dynarray  
-0x3002          data*: 0x5AF1  
+0x3002          data\*: 0x5AF1  
 0x3003          grow()  
-0x3004              temp*: 0x5CF1  
+0x3004              temp\*: 0x5CF1  
   
 HEAP   
 0x5AF1\[ 0  
@@ -67,9 +67,9 @@ HEAP
 
 STACK  
 0x3001      dynarray  
-0x3002          data*: 0x5AF1  
+0x3002          data\*: 0x5AF1  
 0x3003          grow()  
-0x3004              temp*: 0x5CF1  
+0x3004              temp\*: 0x5CF1  
   
 HEAP  
 0x5AF1\[ 0  
@@ -86,9 +86,9 @@ HEAP
 
 STACK  
 0x3001      dynarray  
-0x3002          data*: 0x5CF1  
+0x3002          data\\*: 0x5CF1  
 0x3003          grow()  
-0x3004              temp*: 0x5CF1  
+0x3004              temp\\*: 0x5CF1  
 
 0x5AF1 0 -> Data may persist, but this region is now freed to be used again, and not tracked by data anymore  
 0x5AF2 1  
@@ -104,7 +104,7 @@ STACK
 
 STACK  
 0x3001      dynarray  
-0x3002          data*: 0x5CF1  
+0x3002          data\*: 0x5CF1  
 
 0x5CF1\[ 0  
 0x5CF2  1  

@@ -44,68 +44,68 @@ HEAP
 
 ### Allocate temp
 
-STACK
-0x3001      dynarray
-0x3002          data*: 0x5AF1
-0x3003          grow()
-0x3004              temp*: 0x5CF1
+STACK  
+0x3001      dynarray  
+0x3002          data*: 0x5AF1  
+0x3003          grow()  
+0x3004              temp*: 0x5CF1  
+  
+HEAP   
+0x5AF1\[ 0  
+0x5AF2\] 1  
 
-HEAP 
-0x5AF1\[ 0
-0x5AF2\] 1
-
-0x5CF1\[
-0x5CF2 
-0X5CF3 
-0X5CF4\] 
+0x5CF1\[  
+0x5CF2   
+0X5CF3   
+0X5CF4\]   
 
 ---
 
 ### Copy data from data to temp
 
-STACK
-0x3001      dynarray
-0x3002          data*: 0x5AF1
-0x3003          grow()
-0x3004              temp*: 0x5CF1
-
-HEAP 
-0x5AF1\[ 0
-0x5AF2\] 1
-
-0x5CF1\[ 0
-0x5CF2  1
-0X5CF3  
-0X5CF4\] 
+STACK  
+0x3001      dynarray  
+0x3002          data*: 0x5AF1  
+0x3003          grow()  
+0x3004              temp*: 0x5CF1  
+  
+HEAP  
+0x5AF1\[ 0  
+0x5AF2\] 1  
+  
+0x5CF1\[ 0  
+0x5CF2  1  
+0X5CF3    
+0X5CF4\]   
 
 ---
 
 ### Delete data pointed to by data, and reassign data to point to new area
 
-STACK
-0x3001      dynarray
-0x3002          data*: 0x5CF1
-0x3003          grow()
-0x3004              temp*: 0x5CF1
+STACK  
+0x3001      dynarray  
+0x3002          data*: 0x5CF1  
+0x3003          grow()  
+0x3004              temp*: 0x5CF1  
 
-0x5AF1 0 -> Data will persist, but this region is now freed to be used again, and not tracked by data anymore
-0x5AF2 1
-
-0x5CF1\[ 0
-0x5CF2  1
-0X5CF3  
-0X5CF4\] 
+0x5AF1 0 -> Data may persist, but this region is now freed to be used again, and not tracked by data anymore  
+0x5AF2 1  
+  
+0x5CF1\[ 0  
+0x5CF2  1  
+0X5CF3    
+0X5CF4\]  
 
 ---
 
 ### End of grow function. Local variable temp* goes out scope, but data still holds data
 
-STACK
-0x3001      dynarray
-0x3002          data*: 0x5CF1
+STACK  
+0x3001      dynarray  
+0x3002          data*: 0x5CF1  
 
-0x5CF1\[ 0
-0x5CF2  1
-0X5CF3  
-0X5CF4\] 
+0x5CF1\[ 0  
+0x5CF2  1  
+0X5CF3    
+0X5CF4\]   
 

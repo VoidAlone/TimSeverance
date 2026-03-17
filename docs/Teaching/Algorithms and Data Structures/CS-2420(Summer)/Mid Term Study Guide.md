@@ -1,9 +1,9 @@
-##### Data Structures
+## Data Structures
 - What are ADTs and why do we use them?
 
 - Why do we care about abstraction. What does it allow us to do?
 
-##### Big O
+## Big O
 11ish questions
 
 - best, average, worst case
@@ -12,25 +12,26 @@
 
 - composite runtime + bigO
 
-##### Searches
+## Searches
 
-##### Sorts
-- Insertion Sort 
+## Sorts
+
+### Insertion Sort 
  - swaps (how many comparisons in worst case? tricky question. how do we calculate the number of swaps -> (n-1) * n/2 or the sum of all possible swaps for a given iteration) 3.4.3
 - outer loop execution (how many times?)
 - runtime
 
-- Merge Sort
+### Merge Sort
 	runtime
 
-- Quick Sort
+### Quick Sort
 	runtime
 
--  Selection Sort
+###  Selection Sort
 	runtime
 	order
 
-##### Linked List  
+## Linked List  
 - How to insert into a singly linked list
 
 - Reversal
@@ -39,7 +40,7 @@
 
 - how to traverse iteratively and recursively
 
-##### Stacks  
+## Stacks  
 3 Questions on infix/postfix  
 
 - Infix  
@@ -59,21 +60,21 @@
 - Peek  
 	- returns the top item without removing it
 
-##### Queues
+## Queues
 - Enqueue  
 	- If you're entering a queue, you're entering the back of the line
 	
 - Dequeue  
 	- If you're leaving the queue, you're leaving from the front of the line
 
-##### Deques
+## Deques
 - A queue that can push and pop from both ends
 
-##### Dynamic Array
+## Dynamic Array
 - Allocation?  
 - Append?  
 
-##### Overall Sections to review
+## Overall Sections to review
 1.4 ADT's
 2.6 O Notation
 2.7 Algorithm Analysis

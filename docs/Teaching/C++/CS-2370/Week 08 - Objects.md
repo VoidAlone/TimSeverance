@@ -68,8 +68,6 @@ Overloading is not dispatching, though they are related.
 
 [Function overload vs override](https://www.geeksforgeeks.org/cpp/function-overloading-vs-function-overriding-in-cpp/)
 
-### Templates and Generic Programming
-
 ### Resources
 
 https://www.codementor.io/@michaelsafyan/object-oriented-programming-in-c-du1081gw2

@@ -14,9 +14,9 @@
 
 ## Searches
 
-How many searches to find something?
-Steps involved in the algorithm
-Best case runtime for a search
+How many searches to find something?  
+Steps involved in the algorithm  
+Best case runtime for a search  
 
 - Linear Search  
 - Binary Search  

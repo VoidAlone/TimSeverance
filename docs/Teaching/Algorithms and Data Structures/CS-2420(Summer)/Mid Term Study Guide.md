@@ -14,10 +14,17 @@
 
 ## Searches
 
+How many searches to find something?
+Steps involved in the algorithm
+Best case runtime for a search
+
+- Linear Search  
+- Binary Search  
+
 ## Sorts
 
 ### Insertion Sort 
- - swaps (how many comparisons in worst case? tricky question. how do we calculate the number of swaps -> (n-1) * n/2 or the sum of all possible swaps for a given iteration) 3.4.3
+ - num swaps (how many comparisons in worst case? tricky question. how do we calculate the number of swaps -> (n-1) * n/2 or the sum of all possible swaps for a given iteration) visit section 3.4.3
 - outer loop execution (how many times?)
 - runtime
 

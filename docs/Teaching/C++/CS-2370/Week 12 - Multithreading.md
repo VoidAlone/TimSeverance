@@ -80,6 +80,24 @@ void print_block (int n, char c) {
 
 Here we have a unique_lock of template type mutex. It's called lck, and it takes an existing mutex as its constructor argument. It will now manage that mutex. It's like bodyguard that has the key. Now we don't have to worry about locking and unlocking. 
 
+*IMPORTANT PATTERN*  
+Since unique locks automatically unlock, you may have a section of code that you want to lock, but you don't want to keep your code locked for the full duration of a function. A common pattern is to put your lock in an unnamed scope block like so:
+
+```cpp
+std::mutex mtx;
+
+void doing_something(){
+    //...doing stuff
+    {
+        std::unique_lock<std::mutex> lck (mtx);
+        std::cout << "An Example" << endl;
+    }
+    //...continue doing other stuff
+}
+```
+
+In the situation above, the lock is acquired, it prints to console, and then the scope is exited, which triggers the unlocking of the unique_lock.
+
 ### Condition Variable
 
 A condition variable is an object that receives a lock object like a unique_lock, and blocks access, or stops it from executing. It's the big boss. This thing basically says, hey, I have a signal to wait, and I have a signal to notify you to go. Generally, when we spin up a bunch of threads, they start ripping as soon as they're active. So, we can make those threads wait until we're ready to start. Once we're ready, we can send a notify_all, and then the threads will all start going ham trying to get their jobs done. You use std::condition_variable, call it cv, and use cv.wait() and cv.notify_all().
@@ -92,4 +110,4 @@ Atomic types are types that geared specifically toward multithreading. They won'
 
 ### Videos and Extra Materials
 
-https://www.youtube.com/watch?v=7ENFeb-J75k&t=82s
+https://www.youtube.com/watch?v=7ENFeb-J75k

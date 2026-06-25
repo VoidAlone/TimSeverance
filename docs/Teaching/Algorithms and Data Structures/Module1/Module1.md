@@ -6,7 +6,7 @@ In this module, our goals are to gain high level notions of algorithms, data str
 
 Algorithm: A set of steps used to solve a problem.
 
-The world algorithm is often misappropriated as a term that exclusively belongs to math or computational fields. In reality, you use algorithms on a daily basis. We can use natural algorithms to describe them too. 
+The word algorithm is often misappropriated as a term that exclusively belongs to math or computational fields. In reality, you use algorithms on a daily basis. We can use natural algorithms to describe them too. 
 
 If you've ever followed a recipe for baking a cake or cooking dinner, you used an algorithm. 
 
@@ -79,7 +79,7 @@ In the easiest scenario, maybe we're sorting alphebetically, and our word starts
 
 So, how do we describe this behavior? How do we say "well, the more input you have, the longer it can take in different scenarios." We use Complexity Functions, like Big O notation.
 
-Big O refers to the worst case scenario for something. In our grocery list example, there's a 1:1 correspondence in the number of checks we have to do in relation to the number of items present in the list. Big O notation says that "In the worst case scenario, if you have N items, you have to go all the way to the end of the list to do your insertion." So, we can denote this as O(N). Let's think of another example. In other words, the amount of time it takes in the worst case, is directly proportional to the amount of elements in your list (N).
+Big O is commonly used to talk about worst case growth, but more generally it describes an asymptotic upper bound on growth. In our grocery list example, there's a 1:1 correspondence in the number of checks we may have to do in relation to the number of items present in the list. Big O notation says that "as the input grows, the work grows no faster than this rate." So, if in the worst case we may have to scan all N items, we can denote that as O(N). In other words, the amount of time it takes grows proportionally with the amount of elements in your list (N).
 
 Let's think of another example. Imagine if rather than introducing yourself to the entire class at once, let's say instead I had you all introduce yourselves one on one. So now, every single one of you is introducing yourselves to every single one of you. In other words, For each student in class, for every other student in class, introduce yourself. We now have N^2 introductions happening in our class. This is horribly inefficient. 
 
@@ -90,13 +90,13 @@ In this O(N^2) scenario, 30 second introductions amounts to 2.1 hours roughly. I
 
 ## 6 Asymptotic Notation
 
-The key thing here is that growth is the imporant part. As our operations scale in complexity, it affects how long it'll take to get something done. In introducing yourselves, it doesn't really matter exactly how long I make your introductions. What does matter is that it's a massive pain to introduce yourself to each individual person in the class, and it's an even bigger pain as I wait for you all to finish. What's less painful, is for you to sit in your chair, and say your intro once.
+The key thing here is that growth is the important part. As our operations scale in complexity, it affects how long it'll take to get something done. In introducing yourselves, it doesn't really matter exactly how long I make your introductions. What does matter is that it's a massive pain to introduce yourself to each individual person in the class, and it's an even bigger pain as I wait for you all to finish. What's less painful, is for you to sit in your chair, and say your intro once.
 
-So, we don't care a ton about measuring raw speed. Raw speed is important, but, the way we optimize is by determining where certain bottlenecks are, or in otherwords, finding inefficient algorithms, and making them as efficient as possible.
+So, we don't care a ton about measuring raw speed. Raw speed is important, but the way we optimize is by determining where certain bottlenecks are, or in other words, finding inefficient algorithms, and making them as efficient as possible.
 
-The key here is that Big O notation is a subset of asymptotic notation. In short, we use a graph, and then we have a line that describes some boundary, or asymptote, and say given an input, as we approach the limit where the input is infinite, we get close to that boundary or asymptote. So, if our input is Linear like the grocery list, then the behavior of the graph in the worst case has an asymptote that is linear. If we have all of you introduce yourselves individually, the behavior of the graph is quadratic. 
+The key here is that Big O notation is one kind of asymptotic notation. The main idea is that we care about how a function grows as the input becomes very large. Rather than focusing on exact runtimes, we describe the overall growth rate. So, if the work grows roughly in proportion to the input size, we call it linear. If the work grows roughly with the square of the input size, we call it quadratic.
 
-There are many types of notations we can use, big o, small o, big theta, etc, but the ones we're most often concerned with are the worst case. See: murphy's law, scout motto, etc.
+There are many types of notations we can use, big O, small o, big Theta, etc, but the ones we're most often concerned with in an introductory setting are upper bounds and worst case reasoning.
 
 ## 7 Recursion
 
@@ -112,10 +112,10 @@ Recursion requires practice and a degree of intution. As we deal more with algor
 ## Take Aways
 
 Algorithms describe how to accomplish something
-Abstract Data Types describe how to represent data 
-Data Structures implement that behavior
+Abstract Data Types describe what operations are available and what behavior those operations should have
+Data Structures implement those operations with a concrete representation
 Functions can be described in terms of time and space relative to their inputs.
-Big O notation describes the worst case growth rate for a function
+Big O notation describes an asymptotic upper bound, and is often used to discuss worst case growth rate for a function
 Recursion has 3 rules that you must memorize.
 
 ## Footnotes

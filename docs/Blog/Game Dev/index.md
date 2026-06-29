@@ -4,7 +4,7 @@ This document defines the standard units, movement metrics, architectural conven
 
 ## Reference Documents
 
-- 📋 Interactive Cheat Sheet
+- 📋 [Interactive Cheat Sheet](./Design Bible/design_bible.html)
 - 📄 Printable PDF
 - 📚 Asset Pipeline
 - 🎮 Movement Standards

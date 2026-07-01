@@ -95,17 +95,17 @@ Jump search works by defining some *jump size*. Rather than walking forward one 
 jump_size = 4
 target = 7
 1) \[1,2,3,4,5,6,7,8,9\]  
-    ^  
+    \^  
 2) \[1,2,3,4,5,6,7,8,9\]  
-            ^  
+            \^  
 3) \[1,2,3,4,5,6,7,8,9\]  
-                    ^  
+                    \^  
 *9 is greater than 7 -> linear search over the previous jump space*  
 
 4) \[1,2,3,4,5,6,7,8,9\]   
-                  ^  
+                  \^  
 5) \[1,2,3,4,5,6,7,8,9\]  
-                ^  
+                \^  
 --- 
 
 Ponder: Efficieny, cost, and work

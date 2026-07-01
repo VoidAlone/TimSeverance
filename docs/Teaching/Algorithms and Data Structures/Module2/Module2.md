@@ -55,10 +55,10 @@ There are many types of notations we can use, big O, small o, big Theta, etc, bu
 
 Recursion is a concept that we'll spend more time with as our algorithms and data structures call for it. Recursion is generally a concept that invokes fear, dread, and worry in computer science students. We'll keep it simple for now, remembering the three rules of recursion that will make it easy grapple with going forward. 
 
-A recursive function must:
-1) call itself (recurse)
-2) have a stopping point (base case)
-3) advance to a stopping point (advance case)
+A recursive function must:  
+1) call itself (recurse)  
+2) have a stopping point (base case)  
+3) advance to a stopping point (advance case)  
 
 Recursion requires practice and a degree of intuition. As we deal more with algorithms and data structures that call for recursion, we'll expand that intuition.
 
@@ -90,8 +90,22 @@ Jump search is a more efficient version of the linear search. When I say it's mo
 
 It requires the list to already be sorted!
 
-Jump search works by defining some *jump size*. Rather than walking forward one element at a time, instead, you jump by your jump size through the array. When you jump ahead, you check to see if the current element is the target, if it's less than, or greater than. If it's less than, you simply do a search through the previous jump space. If it's greater than, you keep leaping ahead by your jump size. You have to watch out for jumping beyond your array, so checking the bounds is required here.
+Jump search works by defining some *jump size*. Rather than walking forward one element at a time like linear search, instead, you jump by your jump size through the array. When you jump ahead, you check to see if the current element is the target, if it's less than, or greater than. If it's less than, you simply do a search through the previous jump space. If it's greater than, you keep leaping ahead by your jump size. You have to watch out for jumping beyond your array, so checking the bounds is required here.
 
+jump_size = 4
+target = 7
+1) \[1,2,3,4,5,6,7,8,9\]  
+    ^  
+2) \[1,2,3,4,5,6,7,8,9\]  
+            ^  
+3) \[1,2,3,4,5,6,7,8,9\]  
+                    ^  
+*9 is greater than 7 -> linear search over the previous jump space*  
+
+4) \[1,2,3,4,5,6,7,8,9\]   
+                  ^  
+5) \[1,2,3,4,5,6,7,8,9\]  
+                ^  
 --- 
 
 Ponder: Efficieny, cost, and work

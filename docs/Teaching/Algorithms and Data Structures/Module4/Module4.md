@@ -25,7 +25,7 @@ Growing an array can also result in wasted memory since you have to preallocate 
 
 In this section we'll start to see the benefit of objects.
 
-Object orientation is not just about objects directly. Encapsulation is one of its core ideas: bundling related data and behavior together while hiding implementation details.
+Object orientation is not just about objects directly. Encapsulation is one of its core ideas: bundling related data and behavior together while hiding implementation details. See Extras below for more information.
 
 ## Linked Lists
 
@@ -45,6 +45,8 @@ At the abstract data type level, a linked list supports many of the same operati
 - Traverse
 
 The difference is in the cost of those operations. A linked list is usually very good at inserting or removing near a known position, but slower at direct access because it must follow links from node to node.
+
+Additionally, the Linked List structure is responsible for managing the underlying implementation. The linked list is built from nodes, but an end user doesn't necessarily need to know all the intricate details of managing those nodes. They expect to be able to use methods like insert and remove without worrying about the details. So the Linked List acts as a wrapper around the underlying structure, and provides a sort of interface for interacting with it.
 
 ### Algorithms
 

@@ -152,7 +152,11 @@ int* ptr = &value;
 
 ## Friend
 
-The `friend` keyword allows a non-member function or another class to access private members.
+The `friend` keyword allows a non-member function or another class to access private members. 
+
+The way to keep this one mentally straight is to remember that no one can really call themselves your friend, only you can decide who your friends and who you share details about your life with. So you can declare other classes and methods as "friends" and this will allow them to access private information.
+
+An alternative to this is to provide getters and setters for privatet data.
 
 ```cpp
 class MyClass{

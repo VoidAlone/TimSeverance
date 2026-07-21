@@ -52,12 +52,72 @@ Additionally, the Linked List structure is responsible for managing the underlyi
 
 Common linked list algorithms rely on pointer manipulation.
 
-- Inserting at the front is usually O(1).
-- Removing at the front is usually O(1).
-- Searching for a value is O(n).
-- Accessing the nth element is O(n).
+#### Insertion
 
-Because nodes are connected through pointers, small mistakes in link updates can break the structure. This is one reason careful tracing is so important.
+To insert a new node, first move to the node just before the target position. Then point the new node at the rest of the list, and finally reconnect the previous node to the new node.
+
+```text
+Before:
+head
+ |
+ v
+[A|*] -> [B|*] -> [D|null]
+
+Insert C between B and D:
+
+Step 1: new node points forward
+[C|*] -----> [D|null]
+
+Step 2: previous node reconnects
+head
+ |
+ v
+[A|*] -> [B|*] -> [C|*] -> [D|null]
+```
+
+#### Removal
+
+To remove a node, move to the node just before it. Then skip over the node being removed by reconnecting the previous node directly to the removed node's `next`.
+
+```text
+Before:
+head
+ |
+ v
+[A|*] -> [B|*] -> [C|*] -> [D|null]
+
+Remove C:
+
+Step 1: identify the node before C
+[B|*] -> [C|*] -> [D|null]
+
+Step 2: bypass C
+head
+ |
+ v
+[A|*] -> [B|*] ------------> [D|null]
+
+After:
+head
+ |
+ v
+[A|*] -> [B|*] -> [D|null]
+```
+
+#### Search
+
+To search a linked list, start at the head and follow `next` one node at a time until the value is found or the list ends.
+
+```text
+Searching for C:
+
+head
+ |
+ v
+[A|*] -> [B|*] -> [C|*] -> [D|null]
+  ^        ^        ^
+ check    check    found
+```
 
 ## Takeaways
 

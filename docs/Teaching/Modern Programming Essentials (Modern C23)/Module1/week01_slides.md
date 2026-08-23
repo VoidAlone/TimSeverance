@@ -8,6 +8,7 @@ options:
   end_slide_shorthand: true
 ---
 
+<!-- grid -->
 # CS 1380
 ## Modern Programming Essentials
 

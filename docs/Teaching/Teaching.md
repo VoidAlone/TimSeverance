@@ -1,6 +1,7 @@
 ## Instructor of Record
 
 - CS 1410 - Object Oriented Programming -- **Spring 2023**
+- CS 1380 - Modern Programming Essentials -- **Fall 2026**
 - CS 2300 - Discrete Mathematics 1 -- **Fall 2023, Fall 2024**
 - CS 2370 - C Plus Plus Programming -- **Fall 2024, Fall 2025**
 - CS 2420 - Introduction to Algorithms and Data Structures -- **Fall 2022, Spring 2023, Summer 2024, Summer 2025**

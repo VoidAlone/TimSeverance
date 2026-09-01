@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blender -> Godot 3D Design Bible</title>
+    <style>
+      :root {
+        --bg: #fafafa;
+        --card: #fff;
+        --ink: #151515;
+        --muted: #555;
+        --line: #d7d7d7;
+        --accent: #25324a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          sans-serif;
+        margin: 18px;
+        line-height: 1.22;
+        background: var(--bg);
+        color: var(--ink);
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0 0 10px;
+      }
+      h2 {
+        font-size: 13px;
+        margin: 0 0 5px;
+        color: var(--accent);
+        border-bottom: 1px solid var(--line);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(190px, 1fr));
+        gap: 8px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 8px;
+        break-inside: avoid;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      td {
+        padding: 1px 3px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+      }
+      td:last-child {
+        text-align: right;
+        font-weight: 650;
+        color: #222;
+      }
+      ul {
+        margin: 3px 0 0 17px;
+        padding: 0;
+        font-size: 12px;
+        columns: 2;
+      }
+      p {
+        font-size: 12px;
+        margin: 4px 0;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 11px;
+      }
+      pre {
+        margin: 3px 0;
+        white-space: pre-wrap;
+      }
+      .wide {
+        grid-column: span 2;
+      }
+      .full {
+        grid-column: 1/-1;
+      }
+      .small {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      @media print {
+        body {
+          margin: 0.25in;
+          background: white;
+        }
+        .grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 6px;
+        }
+        .card {
+          padding: 6px;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        @page {
+          size: letter landscape;
+          margin: 0.25in;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blender -> Godot 3D Design Bible v1.0</h1>
+    <div class="grid">
+      <section class="card">
+        <h2>World Scale</h2>
+        <table>
+          <tr>
+            <td>Blender Unit</td>
+            <td>1 m</td>
+          </tr>
+          <tr>
+            <td>Godot Unit</td>
+            <td>1 m</td>
+          </tr>
+          <tr>
+            <td>Export Scale</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Model Grid</td>
+            <td>0.5 m</td>
+          </tr>
+          <tr>
+            <td>Large Modules</td>
+            <td>2 / 4 / 8 / 16 m</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Human Ref</h2>
+        <table>
+          <tr>
+            <td>Height</td>
+            <td>1.80 m</td>
+          </tr>
+          <tr>
+            <td>Eye Height</td>
+            <td>1.68 m</td>
+          </tr>
+          <tr>
+            <td>Shoulder</td>
+            <td>0.48 m</td>
+          </tr>
+          <tr>
+            <td>Arm Span</td>
+            <td>1.80 m</td>
+          </tr>
+          <tr>
+            <td>Reach</td>
+            <td>2.30 m</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Controller</h2>
+        <table>
+          <tr>
+            <td>Capsule H</td>
+            <td>1.80 m</td>
+          </tr>
+          <tr>
+            <td>Capsule R</td>
+            <td>0.30 m</td>
+          </tr>
+          <tr>
+            <td>Crouch H</td>
+            <td>1.20 m</td>
+          </tr>
+          <tr>
+            <td>Step H</td>
+            <td>0.25 m</td>
+          </tr>
+          <tr>
+            <td>Max Slope</td>
+            <td>45 deg</td>
+          </tr>
+          <tr>
+            <td>Stand Jump</td>
+            <td>1.30 m</td>
+          </tr>
+          <tr>
+            <td>Long Jump</td>
+            <td>3.5-4.0 m</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Architecture</h2>
+        <table>
+          <tr>
+            <td>Interior Wall</td>
+            <td>3.0 m</td>
+          </tr>
+          <tr>
+            <td>Exterior Wall</td>
+            <td>3.5-4.0 m</td>
+          </tr>
+          <tr>
+            <td>Door</td>
+            <td>1.0 x 2.2 m</td>
+          </tr>
+          <tr>
+            <td>Double Door</td>
+            <td>2.0 x 2.2 m</td>
+          </tr>
+          <tr>
+            <td>Window Sill</td>
+            <td>0.9 m</td>
+          </tr>
+          <tr>
+            <td>Hall Min</td>
+            <td>2.0 m</td>
+          </tr>
+          <tr>
+            <td>Hall Comfy</td>
+            <td>3.0 m</td>
+          </tr>
+          <tr>
+            <td>Cover</td>
+            <td>0.9 m</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Stairs / Ramps</h2>
+        <table>
+          <tr>
+            <td>Rise</td>
+            <td>0.18 m</td>
+          </tr>
+          <tr>
+            <td>Run</td>
+            <td>0.30 m</td>
+          </tr>
+          <tr>
+            <td>Step Limit</td>
+            <td>0.25 m</td>
+          </tr>
+          <tr>
+            <td>Collision</td>
+            <td>Ramp</td>
+          </tr>
+          <tr>
+            <td>Visual</td>
+            <td>Steps</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Pivots</h2>
+        <table>
+          <tr>
+            <td>Wall</td>
+            <td>Bottom center</td>
+          </tr>
+          <tr>
+            <td>Floor</td>
+            <td>Center</td>
+          </tr>
+          <tr>
+            <td>Pillar</td>
+            <td>Bottom center</td>
+          </tr>
+          <tr>
+            <td>Door</td>
+            <td>Hinge</td>
+          </tr>
+          <tr>
+            <td>Window</td>
+            <td>Bottom center</td>
+          </tr>
+          <tr>
+            <td>Pipe</td>
+            <td>Center</td>
+          </tr>
+          <tr>
+            <td>Prop</td>
+            <td>Bottom center</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Hierarchy</h2>
+        <table>
+          <tr>
+            <td>L0</td>
+            <td>Primitives</td>
+          </tr>
+          <tr>
+            <td>L1</td>
+            <td>Modules</td>
+          </tr>
+          <tr>
+            <td>L2</td>
+            <td>Assemblies</td>
+          </tr>
+          <tr>
+            <td>L3</td>
+            <td>Landmarks</td>
+          </tr>
+          <tr>
+            <td>Rule</td>
+            <td>Do not mutate lower-level modules for higher-level problems</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Collision</h2>
+        <table>
+          <tr>
+            <td>Stairs</td>
+            <td>Ramp</td>
+          </tr>
+          <tr>
+            <td>Rubble</td>
+            <td>Simple hull</td>
+          </tr>
+          <tr>
+            <td>Pipes</td>
+            <td>Capsules/boxes</td>
+          </tr>
+          <tr>
+            <td>Rocks</td>
+            <td>Convex hull</td>
+          </tr>
+          <tr>
+            <td>Buildings</td>
+            <td>Primitive volumes</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Scale Categories</h2>
+        <table>
+          <tr>
+            <td>0.1 m</td>
+            <td>Props</td>
+          </tr>
+          <tr>
+            <td>1 m</td>
+            <td>Furniture</td>
+          </tr>
+          <tr>
+            <td>10 m</td>
+            <td>Rooms</td>
+          </tr>
+          <tr>
+            <td>100 m</td>
+            <td>Buildings</td>
+          </tr>
+          <tr>
+            <td>1 km</td>
+            <td>Districts</td>
+          </tr>
+          <tr>
+            <td>10 km</td>
+            <td>Landmarks</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Infrastructure</h2>
+        <table>
+          <tr>
+            <td>Pipe</td>
+            <td>Straight / Bend / Tee / Valve</td>
+          </tr>
+          <tr>
+            <td>Aqueduct</td>
+            <td>Pier + Arch x N + Cap</td>
+          </tr>
+          <tr>
+            <td>Bridge</td>
+            <td>Abutment + Span x N + Railings</td>
+          </tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Collections</h2>
+        <ul>
+          <li>Reference/</li>
+          <li>Primitives/</li>
+          <li>Architecture/</li>
+          <li>Infrastructure/</li>
+          <li>Nature/</li>
+          <li>Props/</li>
+          <li>Furniture/</li>
+          <li>Lighting/</li>
+          <li>Materials/</li>
+          <li>Characters/</li>
+          <li>Collision/</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Core Materials</h2>
+        <ul>
+          <li>Concrete</li>
+          <li>Brick</li>
+          <li>Stone</li>
+          <li>Wood</li>
+          <li>Metal</li>
+          <li>Glass</li>
+          <li>Dirt</li>
+          <li>Grass</li>
+          <li>Sand</li>
+          <li>Water</li>
+          <li>Emissive</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Naming</h2>
+        <pre>
+wall_2x3
+wall_corner_inner
+floor_4x4
+pillar_round
+arch_large
+beam_4m
+pipe_straight
+pipe_bend_90
+pipe_t
+stair_18cm</pre>
+        <p class="small">lowercase · snake_case · metric where useful</p>
+      </section>
+      <section class="card wide">
+        <h2>Megastructures</h2>
+        <p>Scale through composition, not giant cubes.</p>
+        <p>Door -> Room -> Building -> District -> Megastructure</p>
+        <p>
+          Large primitives: support columns, bridge spans, bulkheads, utility
+          shafts, trusses, cable towers, pipe networks, foundation blocks.
+        </p>
+      </section>
+      <section class="card wide">
+        <h2>Design Philosophy</h2>
+        <ul>
+          <li>Gameplay metrics come first.</li>
+          <li>World scale is always metric.</li>
+          <li>Modules are reusable forever.</li>
+          <li>Build upward through composition.</li>
+          <li>Collision serves gameplay, not visuals.</li>
+          <li>Keep one Blender -> Godot pipeline.</li>
+          <li>Think in systems, not one-off assets.</li>
+        </ul>
+      </section>
+      <section class="card wide">
+        <h2>Reference Scene Checklist</h2>
+        <ul>
+          <li>1.80 m mannequin</li>
+          <li>Character capsule</li>
+          <li>Door</li>
+          <li>Staircase</li>
+          <li>Hallway</li>
+          <li>Wall modules</li>
+          <li>Desk & chair</li>
+          <li>Floor grid</li>
+          <li>Lighting reference</li>
+          <li>Material spheres</li>
+          <li>Export test object</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

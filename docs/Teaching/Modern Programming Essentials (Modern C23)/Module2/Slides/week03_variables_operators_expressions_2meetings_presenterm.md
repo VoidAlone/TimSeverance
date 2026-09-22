@@ -126,6 +126,7 @@ int a = 10, b = 5, c = 2;
 
 int r1 = a - b - c; // (a - b) - c → 3
 int r2 = a = b = c; // a = (b = c) → all become 2
+
 ```
 
 - Arithmetic: left-to-right
@@ -186,6 +187,8 @@ Walk through precedence step by step with a partner.
 int i = 5;
 float f = 3.14f;
 
+float f2 = 10 / 3;
+
 double d = i + f; // i promoted to float, then to double
 
 char c = 100;
@@ -239,7 +242,7 @@ int hex = 0x2A;     // hexadecimal → 42 decimal
 long L = 100000L;
 unsigned u = 42U;
 
-float f = 3.14f;
+float f = 3.14159f;
 double d = 3.14159;
 double sci = 6.02e23;
 ```
@@ -259,7 +262,13 @@ char c = 'A';
 char nl = '\n';
 
 char str[] = "Hello";     // mutable char array
+char str2[] = {'H', 'e', 'l', 'l', 'o'}; // '\0' is a null terminal character at the end of a string
+
 const char *msg = "Hi";   // string literal (read-only)
+
+char *msg2 = malloc(6);
+strcpy(msg2, "Hello");
+
 ```
 
 Escape sequences:
@@ -268,7 +277,7 @@ Escape sequences:
 - `\t` — tab
 - `\\` — backslash
 - `\'` — quote
-
+- `\0` — null character 
 ---
 
 # Constants: `#define` vs `const`

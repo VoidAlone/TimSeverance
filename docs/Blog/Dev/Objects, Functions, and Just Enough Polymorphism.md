@@ -121,5 +121,4 @@ typedef struct {
 } ActionVTable;
 ```
 
-C makes these layers unusually visible because it doesn't automatically bundle state, behavior, polymorphic dispatch, and information hiding into the single concept of a class. You can start with a function, add metadata when you need it, introduce opaque state when there is genuinely something worth encapsulating, and introduce a vtable only when multiple interchangeable operations justify one. In that sense, you can compose exactly as much “object” as the problem actually needs.
-
+C makes these layers unusually visible because it doesn't automatically bundle state, behavior, polymorphic dispatch, and information hiding into the single concept of a class. You can start with a function, add metadata when you need it, introduce opaque state when there is genuinely something worth encapsulating, and introduce a vtable only when multiple interchangeable operations justify one. Seen through Kay’s conception of OOP, an object earns its place when it represents a boundary around knowledge and behavior—not merely because two pieces of behavior need different implementations. In that sense, C lets you compose exactly as much “object” as the problem actually needs.

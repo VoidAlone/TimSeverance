@@ -10,6 +10,14 @@ int main() {
     printf("Enter age (1-120): ");
     result = scanf("%d", &age);
 
+	if(age > 0){
+
+	}
+	else{
+		print("");
+	}
+
+
     if (result != 1 || age < 0 || age > 120) {
       printf("Please enter a valid number.\n");
       while ((ch = getchar()) != '\n' && ch != EOF) {

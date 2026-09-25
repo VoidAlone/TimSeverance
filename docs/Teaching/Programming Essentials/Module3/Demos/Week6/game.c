@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-int skeleton_hp;
-int skeleton_atk;
+char e_type[16];
+int e_hp;
+int e_atk;
 
-int slime_hp;
-int slime_atk;
-
-int goblin_hp;
-int goblin_atk;
+int p_hp;
+int p_atk;
 
 typedef enum{
 	SLIME 	 = 1,
@@ -22,17 +20,24 @@ int load_enemy(E_Enemy enemy_type){
 	switch(enemy_type){
 		case SLIME:
 			cfg = fopen("slime.cfg", "r");
+			fscanf(cfg, "hp=%d atk=%d", &e_hp, &e_atk);
 			break;
 		case GOBLIN:
+			cfg = fopen("goblin.cfg", "r");
+			fscanf(cfg, "hp=%d atk=%d", &e_hp, &e_atk);
 			break;
 		case SKELETON:
+			cfg = fopen("skeleton.cfg", "r");
+			fscanf(cfg, "hp=%d atk=%d", &e_hp, &e_atk);
 			break;
 		default:
 			return -1;
 	}
+	fclose(cfg);
 	return 1;
 }
 
 int main(){
-	return 0;
+	E_Enemy enemy = GOBLIN;
+	load_enemy(enemy);
 }

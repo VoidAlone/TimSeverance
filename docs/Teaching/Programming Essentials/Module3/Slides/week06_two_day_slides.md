@@ -433,7 +433,7 @@ Notice the prototype ends with `;`.
 These are equivalent prototypes:
 
 ```c
-int add(int a, int b);
+int add(int x, int y);
 ```
 
 ```c
@@ -866,7 +866,8 @@ Consider:
 
 ```c
 int square(int x) {
-    return x * x;
+    static int y = 0;
+    return x * x + y++;
 }
 ```
 

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blender Low-Poly Smooth Modeling Cheat Sheet</title>
+<style>
+  @page { size: landscape; margin: 0.35in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.18;
+    margin: 12px;
+    color: #111;
+    background: #fff;
+  }
+  h1 { font-size: 20px; margin: 0 0 6px; letter-spacing: -0.3px; }
+  h2 { font-size: 13px; margin: 8px 0 3px; border-bottom: 1px solid #333; }
+  .subtitle { font-size: 11px; margin-bottom: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-items: start; }
+  .wide { grid-column: span 2; }
+  .full { grid-column: 1 / -1; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 0 0 4px; }
+  th, td { border: 1px solid #999; padding: 2px 4px; vertical-align: top; overflow-wrap: break-word; }
+  th { background: #eee; font-weight: 700; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 10.5px; background: #f4f4f4; padding: 0 2px; }
+  .tight td, .tight th { padding: 1.5px 3px; }
+  .key { width: 27%; white-space: nowrap; }
+  .action { width: 32%; }
+  .notes { width: 41%; }
+  .tech { width: 24%; }
+  .use { width: 38%; }
+  .avoid { width: 38%; }
+  .small { font-size: 10px; }
+  .callout { border: 1px solid #777; padding: 5px 7px; margin-top: 5px; background: #fafafa; }
+  ul { margin: 2px 0 4px 16px; padding: 0; }
+  li { margin: 1px 0; }
+  .two-col { columns: 2; column-gap: 18px; }
+  @media print {
+    body { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<h1>Blender Cheat Sheet: Low-Poly Models That Still Look Smooth</h1>
+<div class="subtitle">Goal: late-PS1/PS2/GameCube-style efficiency — broad forms, controlled silhouettes, selective bevels, smooth/weighted normals, minimal unnecessary subdivision.</div>
+
+<div class="grid">
+<section>
+<h2>Core Transform / Selection</h2>
+<table class="tight">
+<tr><th class="key">Key</th><th class="action">Action</th><th class="notes">Notes</th></tr>
+<tr><td><code>G</code></td><td>Move</td><td><code>X/Y/Z</code> constrains axis; <code>Shift+axis</code> excludes axis.</td></tr>
+<tr><td><code>R</code></td><td>Rotate</td><td>Use axis constraints constantly.</td></tr>
+<tr><td><code>S</code></td><td>Scale</td><td><code>S X 0</code> flattens on X; apply scale later.</td></tr>
+<tr><td><code>Tab</code></td><td>Object/Edit Mode</td><td>Main mode toggle.</td></tr>
+<tr><td><code>1 / 2 / 3</code></td><td>Vertex / Edge / Face</td><td>Edit Mode selection types.</td></tr>
+<tr><td><code>A</code></td><td>Select/Deselect All</td><td>Behavior depends on current selection state.</td></tr>
+<tr><td><code>B</code></td><td>Box Select</td><td>Fast rectangular selection.</td></tr>
+<tr><td><code>C</code></td><td>Circle Select</td><td>Paint selection; RMB/Esc exits.</td></tr>
+<tr><td><code>Alt+Click</code></td><td>Edge Loop</td><td>Extremely important for topology edits.</td></tr>
+<tr><td><code>Ctrl+Alt+Click</code></td><td>Edge Ring</td><td>Useful for loop-related edits.</td></tr>
+<tr><td><code>L</code></td><td>Select Linked</td><td>Hover mesh island in Edit Mode.</td></tr>
+<tr><td><code>H / Alt+H</code></td><td>Hide / Unhide</td><td>Clean workspace while modeling.</td></tr>
+<tr><td><code>X</code></td><td>Delete Menu</td><td>Prefer Dissolve when preserving surface.</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Mesh Editing</h2>
+<table class="tight">
+<tr><th class="key">Key</th><th class="action">Action</th><th class="notes">Use Case</th></tr>
+<tr><td><code>E</code></td><td>Extrude</td><td>Primary modeling operation; block out limbs, walls, forms.</td></tr>
+<tr><td><code>I</code></td><td>Inset</td><td>Panels, armor, doors, windows, face planes.</td></tr>
+<tr><td><code>Ctrl+R</code></td><td>Loop Cut</td><td>Add only when silhouette/deformation needs it.</td></tr>
+<tr><td><code>Ctrl+B</code></td><td>Edge Bevel</td><td>Small chamfers make boxy assets shade well.</td></tr>
+<tr><td><code>Shift+Ctrl+B</code></td><td>Vertex Bevel</td><td>Round corners without full subdivision.</td></tr>
+<tr><td><code>K</code></td><td>Knife</td><td>Manual cuts for silhouettes/panel structure.</td></tr>
+<tr><td><code>J</code></td><td>Connect Verts</td><td>Controlled internal edges.</td></tr>
+<tr><td><code>F</code></td><td>Fill Face</td><td>Create face from selected verts/edges.</td></tr>
+<tr><td><code>M</code></td><td>Merge</td><td>Cleanup, collapse detail, fix overlaps.</td></tr>
+<tr><td><code>P</code></td><td>Separate</td><td>Split selected geometry to new object.</td></tr>
+<tr><td><code>Y</code></td><td>Split</td><td>Detach shared verts without moving.</td></tr>
+<tr><td><code>F3</code></td><td>Search Command</td><td>Fastest way to find rarely used tools.</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Navigation / View / Object</h2>
+<table class="tight">
+<tr><th class="key">Key</th><th class="action">Action</th><th class="notes">Notes</th></tr>
+<tr><td><code>MMB</code></td><td>Orbit</td><td>Rotate view.</td></tr>
+<tr><td><code>Shift+MMB</code></td><td>Pan</td><td>Move view.</td></tr>
+<tr><td><code>Wheel</code></td><td>Zoom</td><td>Zoom view.</td></tr>
+<tr><td><code>Numpad 1/3/7</code></td><td>Front/Right/Top</td><td><code>Ctrl</code> gives opposite side.</td></tr>
+<tr><td><code>Numpad 5</code></td><td>Ortho/Persp</td><td>Use Ortho for precise modeling.</td></tr>
+<tr><td><code>Numpad .</code></td><td>Frame Selected</td><td>Essential navigation reset.</td></tr>
+<tr><td><code>Z</code></td><td>Shading Pie</td><td>Wireframe/Solid/Material/Rendered.</td></tr>
+<tr><td><code>.</code></td><td>Pivot Pie</td><td>Median, Individual Origins, Cursor, etc.</td></tr>
+<tr><td><code>,</code></td><td>Orientation Pie</td><td>Global, Local, Normal, View.</td></tr>
+<tr><td><code>Shift+A</code></td><td>Add Object</td><td>Mesh, curve, light, camera, etc.</td></tr>
+<tr><td><code>Shift+D</code></td><td>Duplicate</td><td>Real copy.</td></tr>
+<tr><td><code>Alt+D</code></td><td>Linked Duplicate</td><td>Shares mesh data.</td></tr>
+<tr><td><code>Ctrl+A</code></td><td>Apply Transform</td><td>Apply scale before beveling/exporting.</td></tr>
+<tr><td><code>Ctrl+J</code></td><td>Join Objects</td><td>Combine selected objects.</td></tr>
+</table>
+</section>
+
+<section class="wide">
+<h2>Low-Poly Smooth Modeling Techniques</h2>
+<table class="tight">
+<tr><th class="tech">Technique</th><th class="use">Use It For</th><th class="avoid">Avoid / Watch Out</th></tr>
+<tr><td>Shade Smooth + Auto Smooth</td><td>Makes low-side cylinders, limbs, and curved surfaces read smoother without more polygons.</td><td>Whole-object smoothing on cubes/plates unless sharp edges are marked or angle-limited.</td></tr>
+<tr><td>Weighted Normals</td><td>Large flat faces with small bevels; gives clean “professionally authored low-poly” shading.</td><td>Relying on it to fix bad topology or lumpy silhouettes.</td></tr>
+<tr><td>Small Bevels</td><td>Hard-surface corners, boots, armor, props, buildings. Better than subdivision for boxy/smooth style.</td><td>Huge bevels that round away the form or add too many segments.</td></tr>
+<tr><td>Silhouette-First Geometry</td><td>Faces, shoulders, hands, boots, hair, weapons, creature profiles.</td><td>Adding loops to flat interior surfaces nobody sees.</td></tr>
+<tr><td>Large Flat Planes</td><td>Armor panels, walls, torsos, cloth sections, simple props.</td><td>Subdividing planes just because they look “empty.” Paint/texture internal detail instead.</td></tr>
+<tr><td>Controlled Cylinders</td><td>6 sides for tiny pipes, 8 for grips/arms, 8–10 legs, 10–12 torsos/large rounded parts.</td><td>24–64 sided cylinders for assets meant to feel retro/efficient.</td></tr>
+<tr><td>Mirror Modifier</td><td>Characters, symmetrical armor, vehicles, props.</td><td>Applying too early; keep non-destructive while designing.</td></tr>
+<tr><td>Solidify Modifier</td><td>Clothing, shields, shells, panels, straps.</td><td>Manually modeling thickness before forms are settled.</td></tr>
+<tr><td>Array Modifier</td><td>Repeating bolts, fence posts, teeth, vents, ornaments.</td><td>Copy/pasting repeated pieces by hand.</td></tr>
+<tr><td>Shrinkwrap</td><td>Clothes/armor laid over a body mesh.</td><td>Using it as a substitute for clean retopology.</td></tr>
+<tr><td>Dissolve Edges</td><td>Remove unneeded geometry while preserving faces.</td><td>Using Delete Edge and accidentally opening holes.</td></tr>
+<tr><td>Texture Detail</td><td>Seams, scratches, stitching, buttons, panel lines, fabric noise.</td><td>Modeling every small surface detail as geometry.</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Modifier Stack Templates</h2>
+<table class="tight">
+<tr><th>Asset Type</th><th>Typical Stack</th><th>Notes</th></tr>
+<tr><td>Character blockout</td><td><code>Mirror → Armature later</code></td><td>Model broad forms first. Add loops near joints only.</td></tr>
+<tr><td>Boxy hard surface</td><td><code>Mirror → Bevel → Weighted Normal</code></td><td>The main recipe for clean boxy/smooth assets.</td></tr>
+<tr><td>Cloth/armor shell</td><td><code>Mirror → Solidify → Bevel → Weighted Normal</code></td><td>Good for tunics, coats, shoulder armor, shields.</td></tr>
+<tr><td>Export/game mesh</td><td><code>Apply/Freeze → Triangulate</code></td><td>Triangulate at export or final stage, not while exploring.</td></tr>
+<tr><td>Usually skip</td><td><code>Subdivision Surface</code></td><td>Use only intentionally; it fights the late-PS2 low-poly direction.</td></tr>
+</table>
+
+<h2>Decision Check Before Adding Geometry</h2>
+<table class="tight">
+<tr><th>Question</th><th>If Yes</th><th>If No</th></tr>
+<tr><td>Changes silhouette?</td><td>Add geometry.</td><td>Texture it or leave it.</td></tr>
+<tr><td>Needed for animation deformation?</td><td>Add clean loops.</td><td>Do not add loops.</td></tr>
+<tr><td>Needs better light catch?</td><td>Add small bevel.</td><td>Keep sharp/flat.</td></tr>
+<tr><td>Is it tiny surface detail?</td><td>Paint/normal/texture.</td><td>Model only if readable in silhouette.</td></tr>
+</table>
+</section>
+
+<section class="full">
+<h2>Practical Style Rules for Boxy/Smooth Low-Poly</h2>
+<div class="two-col small">
+<ul>
+<li>Spend triangles on outlines, not broad internal surfaces.</li>
+<li>Use fewer, better-placed loops rather than evenly subdividing everything.</li>
+<li>Prefer bevel + weighted normals over subdivision surface.</li>
+<li>Shade Smooth is useful, but only with sharp edges/auto smooth/weighted normals.</li>
+<li>Keep big readable forms: head mass, torso mass, shoulder line, boot shape, weapon shape.</li>
+<li>Let textures carry seams, fabric, scratches, buttons, wrinkles, and panel lines.</li>
+<li>Apply scale before bevels; unapplied scale causes uneven bevels.</li>
+<li>Use quads while modeling; triangulate late for export if needed.</li>
+<li>Use orthographic views for proportion and perspective view for feel.</li>
+<li>Save incremental files: <code>model_001.blend</code>, <code>model_002.blend</code>, etc.</li>
+<li>For characters, add loops around shoulders, elbows, knees, hips, mouth/eyes only where deformation or expression needs them.</li>
+<li>For props, most surfaces can be one big face plus small bevels on visible edges.</li>
+</ul>
+</div>
+<div class="callout"><strong>Mental model:</strong> “Does this polygon help the outline, deformation, or lighting?” If not, it is probably texture/detail work, not geometry work.</div>
+</section>
+</div>
+</body>
+</html>

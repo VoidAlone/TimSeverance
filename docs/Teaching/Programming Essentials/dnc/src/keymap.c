@@ -1,4 +1,5 @@
 #include "keymap.h"
+#include "action.h"
 
 typedef struct{
 	char* keybind;

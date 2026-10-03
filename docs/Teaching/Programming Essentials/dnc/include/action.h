@@ -17,4 +17,6 @@ typedef struct{
 	UActionValue value;
 } Action;
 
+Action get_action(char* action);
+
 #endif // !ACTION_H

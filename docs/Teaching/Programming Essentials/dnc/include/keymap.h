@@ -5,6 +5,6 @@
 
 typedef struct Keymap *keymap;
 
-void register_keybinds();
+void register_keybinds(ui_t *u);
 
 #endif // !KEYMAP

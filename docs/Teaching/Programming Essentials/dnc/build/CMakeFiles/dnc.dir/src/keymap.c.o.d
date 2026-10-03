@@ -53,4 +53,6 @@ CMakeFiles/dnc.dir/src/keymap.c.o: \
  /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
  /usr/include/asm/sockios.h /usr/include/asm-generic/sockios.h \
  /usr/include/bits/ioctl-types.h \
- /home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming\ Essentials/dnc/include/action.h
+ /usr/lib64/gcc/x86_64-suse-linux/16/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h

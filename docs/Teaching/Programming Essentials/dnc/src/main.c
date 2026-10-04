@@ -12,7 +12,6 @@ void quit(){
 	ui_box_t(ui_t);
 }
 
-
 int main(){
 	ui_new(0, &u);
 	ui_key("q", quit, &u);

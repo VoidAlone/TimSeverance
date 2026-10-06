@@ -43,12 +43,12 @@ void action_right(){
 	}
 }
 
-//
+// need to make windows before I can decide what this does
 void action_back(){
 	
 }
 
-//
+// need to make windows before I can decide what this does
 void action_select(){
 	
 }

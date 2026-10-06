@@ -1,9 +1,11 @@
 #ifndef MENU_H
 #define MENU_H
 
+typedef void (*MenuAction)(void);
+
 typedef struct{
 	char* name;
-
+	MenuAction action;
 } MenuItem;
 
 typedef enum{
@@ -14,6 +16,7 @@ typedef enum{
 typedef struct{
 	int index;
 	int count;
+	MenuItem* items;
 	MenuOrientation orientation;
 } Menu;
 

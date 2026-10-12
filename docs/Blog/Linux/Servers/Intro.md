@@ -11,10 +11,10 @@ A server is just machine or program that manages access to a resource over a net
 
 *You don't need special equipment to start self-hosting*
 
-Typically when people talk about self-hosting, they mention servers. The typical idea is that of a machine that's always-on. That's a convenience. You can: 
-1) Use the computer you already have
-2) Use a spare device like a laptop or old pc
-3) Buy a new computer for it
+Typically when people talk about self-hosting, they mention servers. The typical idea is that of a machine that's always-on. That's a convenience. You can:  
+1) Use the computer you already have  
+2) Use a spare device like a laptop or old pc  
+3) Buy a new computer for it  
 
 ## My setup
 

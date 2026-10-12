@@ -1,6 +1,8 @@
-# Intro
+# Intro to Homelab
 
 <img src="../images/my_server.jpg" width="400" alt="my server">
+
+## Intro 
 
 ["Keep Control of Your Computing, So It Doesn't Control You!"](https://www.gnu.org/philosophy/keep-control-of-your-computing.html.en)  
 - Richard Stallman (GNU)

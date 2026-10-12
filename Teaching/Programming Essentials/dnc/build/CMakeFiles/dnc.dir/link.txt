@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/dnc.dir/link.d CMakeFiles/dnc.dir/src/keymap.c.o CMakeFiles/dnc.dir/src/main.c.o -o dnc

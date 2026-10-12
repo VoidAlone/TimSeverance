@@ -20,7 +20,7 @@ That all said, here's my setup. I knew I wanted to eventually have an always-on 
 
 ### Hardware
 
-<img src="./images/my_server.jpg" width="400" alt="my server">
+<img src="../images/my_server.jpg" width="400" alt="my server">
 
 | Component | Specification |
 | --- | --- |

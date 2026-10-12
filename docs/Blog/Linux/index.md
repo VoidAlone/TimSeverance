@@ -2,6 +2,7 @@
 
 This is a page for Linux stuff as I've learned it. I haven't been so great at keeping up with it, but as I come across interesting things I'll post here.
 
+```
           ,...,                                 ranch@puppy
      .,:lloooooc;.                              ---------------
    ,ool'     oo,;oo:                            OS: openSUSE Tumbleweed x86_64
@@ -24,4 +25,4 @@ This is a page for Linux stuff as I've learned it. I haven't been so great at ke
                        `oo, 'oo      .:oo       
                          'ooooc,, ,:lol        
                             `''"clc"'          
-                                                
+```                                             

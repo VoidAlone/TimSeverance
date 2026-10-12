@@ -27,7 +27,7 @@ That all said, here's my setup. I knew I wanted to eventually have an always-on 
 | --- | --- |
 | PC | Lenovo ThinkCentre M920q |
 | OS | openSUSE Tumbleweed x86_64 |
-| BD | Verbatim Slimline |
+| BD | Verbatim Slimline Blu-ray Writer |
 | HDD | Seage Exos X16 14TB |
 
 ### Software

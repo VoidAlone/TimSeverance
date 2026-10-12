@@ -2,7 +2,7 @@
 
 ## Intro
 
-["Keep Control of Your Computing, So It Doesn't Control You!"](https://www.gnu.org/philosophy/keep-control-of-your-computing.html.en)
+["Keep Control of Your Computing, So It Doesn't Control You!"](https://www.gnu.org/philosophy/keep-control-of-your-computing.html.en)  
 - Richard Stallman (GNU)
 
 A server is just machine or program that manages access to a resource over a network. That network can be entirely local and on one machine, or spread across many machines locally or remotely. 
@@ -20,7 +20,7 @@ That all said, here's my setup. I knew I wanted to eventually have an always-on 
 
 ### Hardware
 
-<img src="./.images/my_server.jpg" width="400" alt="my server">
+<img src="./images/my_server.jpg" width="400" alt="my server">
 
 | Component | Specification |
 | --- | --- |

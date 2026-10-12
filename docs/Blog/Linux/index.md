@@ -2,7 +2,7 @@
 
 This is a page for Linux stuff as I've learned it. I haven't been so great at keeping up with it, but as I come across interesting things I'll post here.
 
-          ,...,                                 tim@localhost
+          ,...,                                 ranch@puppy
      .,:lloooooc;.                              ---------------
    ,ool'     oo,;oo:                            OS: openSUSE Tumbleweed x86_64
  .lo'        oo.   oo:                          Host: B650M GAMING PLUS WIFI

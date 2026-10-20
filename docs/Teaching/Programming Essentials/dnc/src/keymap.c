@@ -1,7 +1,8 @@
-#include "keymap.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include "keymap.h"
+#include "actions.h"
 
 typedef uint64_t ActionId;
 #define WORDSIZE 8
@@ -31,7 +32,7 @@ ActionId word(char* string){
 }
 
 typedef enum{
-	MENU 	= WORD('M','E','N','U',0,0,0,0),
+	BACK = WORD('B','A','C','K',0,0,0,0),
 	SELECT 	= WORD('S','E','L','E','C','T',0,0),
 	UP 		= WORD('U','P',0,0,0,0,0,0),
 	DOWN 	= WORD('D','O','W','N',0,0,0,0),
@@ -47,18 +48,23 @@ void register_keybinds(ui_t *u){
 	if(cfg){
 		while(fscanf(cfg, "%8[^=]=%8s", action, keybind)){
 			switch(word(action)){
-				case MENU:
-					// ui_key(keybind, func, u);
+				case BACK:
+					ui_key(keybind, action_back, u);
 					break;
 				case SELECT:
+					ui_key(keybind, action_select, u);
 					break;
 				case UP:
+					ui_key(keybind, action_up, u);
 					break;
 				case DOWN:
+					ui_key(keybind, action_down, u);
 					break;
 				case LEFT:
+					ui_key(keybind, action_left, u);
 					break;
 				case RIGHT:
+					ui_key(keybind, action_right, u);
 					break;
 				default:
 					break;

@@ -96,6 +96,7 @@ for (int i = 0; i < 5; i++) {
 
 ```c
 int scores[] = {95, 80, 75, 100};
+int *scores ...
 
 size_t count = sizeof(scores) / sizeof(scores[0]);
 printf("%zu elements\n", count);

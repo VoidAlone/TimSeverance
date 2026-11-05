@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build",
+  "command": "/usr/bin/cc  -I\"/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/include\" -std=gnu2x -o CMakeFiles/dnc.dir/src/keymap.c.o -c \"/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/src/keymap.c\"",
+  "file": "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/src/keymap.c",
+  "output": "CMakeFiles/dnc.dir/src/keymap.c.o"
+},
+{
+  "directory": "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build",
+  "command": "/usr/bin/cc  -I\"/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/include\" -std=gnu2x -o CMakeFiles/dnc.dir/src/main.c.o -c \"/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/src/main.c\"",
+  "file": "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/src/main.c",
+  "output": "CMakeFiles/dnc.dir/src/main.c.o"
+}
+]

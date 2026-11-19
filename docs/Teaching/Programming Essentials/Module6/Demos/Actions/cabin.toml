@@ -1,0 +1,11 @@
+[package]
+name = "actions"
+version = "0.1.0"
+c-standard = "c23"
+
+[target.actions]
+type = "executable"
+sources = [
+	"src/main.c",
+	"src/Actions.c"
+	]

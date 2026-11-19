@@ -2,7 +2,6 @@
 #define ACTIONS_H
 
 #include "menu.h"
-#include "game.h"
 
 void set_active_menu(Menu* menu);
 

@@ -18,6 +18,9 @@ typedef uint64_t ActionId;
 	(uint64_t)(uint8_t)(h) << 0 * CHARSIZE   \
 ) 
 
+//['u']['p'][\0][\0]
+//['u']['p'][0][0]
+
 ActionId word(char* string){
 	return WORD(
 			string[0] == '\0' ? 0 : string[0],
@@ -32,7 +35,7 @@ ActionId word(char* string){
 }
 
 typedef enum{
-	BACK = WORD('B','A','C','K',0,0,0,0),
+	BACK 	= WORD('B','A','C','K',0,0,0,0),
 	SELECT 	= WORD('S','E','L','E','C','T',0,0),
 	UP 		= WORD('U','P',0,0,0,0,0,0),
 	DOWN 	= WORD('D','O','W','N',0,0,0,0),

@@ -1,0 +1,3 @@
+/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/dnc.dir
+/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/edit_cache.dir
+/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/rebuild_cache.dir

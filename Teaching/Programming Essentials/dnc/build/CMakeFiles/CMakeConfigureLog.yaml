@@ -1,0 +1,1087 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/local/vitasdk/bin/uname"
+      - "/home/ranch/.local/bin/uname"
+      - "/home/ranch/bin/uname"
+      - "/home/ranch/Emulation/Emulators/Linux/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 7.2.6-1-default - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/local/vitasdk/bin/gmake"
+      - "/home/ranch/.local/bin/gmake"
+      - "/home/ranch/bin/gmake"
+      - "/home/ranch/Emulation/Emulators/Linux/gmake"
+      - "/usr/local/bin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/local/vitasdk/bin/cc"
+      - "/home/ranch/.local/bin/cc"
+      - "/home/ranch/bin/cc"
+      - "/home/ranch/Emulation/Emulators/Linux/cc"
+      - "/usr/local/bin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/4.4.3/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/usr/local/vitasdk/bin/dlltool"
+      - "/home/ranch/.local/bin/dlltool"
+      - "/home/ranch/bin/dlltool"
+      - "/home/ranch/Emulation/Emulators/Linux/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/bin/dlltool"
+      - "/home/ranch/.dotnet/tools/dlltool"
+    found: "/home/linuxbrew/.linuxbrew/bin/dlltool"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/usr/local/vitasdk/bin/tapi"
+      - "/home/ranch/.local/bin/tapi"
+      - "/home/ranch/bin/tapi"
+      - "/home/ranch/Emulation/Emulators/Linux/tapi"
+      - "/usr/local/bin/tapi"
+      - "/bin/tapi"
+      - "/home/ranch/.dotnet/tools/tapi"
+      - "/home/linuxbrew/.linuxbrew/bin/tapi"
+      - "/home/linuxbrew/.linuxbrew/sbin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-16.2"
+      - "gcc-ar-16"
+      - "gcc-ar16"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-16.2"
+      - "/usr/local/vitasdk/bin/gcc-ar-16.2"
+      - "/home/ranch/.local/bin/gcc-ar-16.2"
+      - "/home/ranch/bin/gcc-ar-16.2"
+      - "/home/ranch/Emulation/Emulators/Linux/gcc-ar-16.2"
+      - "/usr/local/bin/gcc-ar-16.2"
+      - "/bin/gcc-ar-16.2"
+      - "/home/ranch/.dotnet/tools/gcc-ar-16.2"
+      - "/home/linuxbrew/.linuxbrew/bin/gcc-ar-16.2"
+      - "/home/linuxbrew/.linuxbrew/sbin/gcc-ar-16.2"
+    found: "/usr/bin/gcc-ar-16"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-16.2"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/vitasdk/bin/"
+      - "/home/ranch/.local/bin/"
+      - "/home/ranch/bin/"
+      - "/home/ranch/Emulation/Emulators/Linux/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/home/ranch/.dotnet/tools/"
+      - "/home/linuxbrew/.linuxbrew/bin/"
+      - "/home/linuxbrew/.linuxbrew/sbin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-16.2"
+      - "/usr/local/vitasdk/bin/gcc-ranlib-16.2"
+      - "/home/ranch/.local/bin/gcc-ranlib-16.2"
+      - "/home/ranch/bin/gcc-ranlib-16.2"
+      - "/home/ranch/Emulation/Emulators/Linux/gcc-ranlib-16.2"
+      - "/usr/local/bin/gcc-ranlib-16.2"
+      - "/bin/gcc-ranlib-16.2"
+      - "/home/ranch/.dotnet/tools/gcc-ranlib-16.2"
+      - "/home/linuxbrew/.linuxbrew/bin/gcc-ranlib-16.2"
+      - "/home/linuxbrew/.linuxbrew/sbin/gcc-ranlib-16.2"
+    found: "/usr/bin/gcc-ranlib-16"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/vitasdk/bin"
+        - "/home/ranch/.local/bin"
+        - "/home/ranch/bin"
+        - "/home/ranch/Emulation/Emulators/Linux"
+        - "/home/ranch/.local/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/home/ranch/.dotnet/tools"
+        - "/home/linuxbrew/.linuxbrew/bin"
+        - "/home/linuxbrew/.linuxbrew/sbin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT"
+      binary: "/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c1b1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7c1b1.dir/build.make CMakeFiles/cmTC_7c1b1.dir/build
+        gmake[1]: Entering directory '/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT'
+        Building C object CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure CFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' CXXFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' XCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' TCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' GDCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -g' --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d,jit,m2,cobol,algol68 --enable-offload-targets=nvptx-none,amdgcn-amdhsa, --enable-offload-defaulted --without-cuda-driver --enable-host-shared --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/16 --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --enable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-16 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --with-build-config=bootstrap-lto-lean --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.2.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7c1b1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccaFXkzY.s
+        GNU C23 (SUSE Linux) version 16.2.0 (x86_64-suse-linux)
+        	compiled by GNU C version 16.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib64/gcc/x86_64-suse-linux/16/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/16/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 00000000000000000000000000000000
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o /tmp/ccaFXkzY.s
+        GNU assembler version 2.45.0 (x86_64-suse-linux) using BFD version (GNU Binutils; openSUSE Tumbleweed) 2.45.0.20251103-4
+        COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_7c1b1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c1b1.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure CFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' CXXFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' XCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' TCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' GDCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -g' --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d,jit,m2,cobol,algol68 --enable-offload-targets=nvptx-none,amdgcn-amdhsa, --enable-offload-defaulted --without-cuda-driver --enable-host-shared --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/16 --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --enable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-16 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --with-build-config=bootstrap-lto-lean --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.2.0 (SUSE Linux) 
+        COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1b1' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1b1.'
+         /usr/lib64/gcc/x86_64-suse-linux/16/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o
+        collect2 version 16.2.0
+        /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o
+        GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.45.0.20251103-4
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1b1' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1b1.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -o cmTC_7c1b1
+        gmake[1]: Leaving directory '/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib64/gcc/x86_64-suse-linux/16/include]
+          add: [/usr/local/include]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/16/include-fixed]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/16/include] ==> [/usr/lib64/gcc/x86_64-suse-linux/16/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/16/include-fixed] ==> [/usr/lib64/gcc/x86_64-suse-linux/16/include-fixed]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/include] ==> [/usr/x86_64-suse-linux/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib64/gcc/x86_64-suse-linux/16/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/16/include-fixed;/usr/x86_64-suse-linux/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c1b1/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7c1b1.dir/build.make CMakeFiles/cmTC_7c1b1.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/ranch/Repos/VoidAlone/TimSeverance/docs/Teaching/Programming Essentials/dnc/build/CMakeFiles/CMakeScratch/TryCompile-c03aUT']
+        ignore line: [Building C object CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure CFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' CXXFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' XCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' TCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' GDCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -g' --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d jit m2 cobol algol68 --enable-offload-targets=nvptx-none amdgcn-amdhsa  --enable-offload-defaulted --without-cuda-driver --enable-host-shared --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/16 --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --enable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-16 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --with-build-config=bootstrap-lto-lean --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.2.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7c1b1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccaFXkzY.s]
+        ignore line: [GNU C23 (SUSE Linux) version 16.2.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 16.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/16/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/16/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o /tmp/ccaFXkzY.s]
+        ignore line: [GNU assembler version 2.45.0 (x86_64-suse-linux) using BFD version (GNU Binutils]
+        ignore line: [ openSUSE Tumbleweed) 2.45.0.20251103-4]
+        ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_7c1b1]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c1b1.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure CFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' CXXFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' XCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' TCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -g' GDCFLAGS=' -fcf-protection -O2 -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -g' --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d jit m2 cobol algol68 --enable-offload-targets=nvptx-none amdgcn-amdhsa  --enable-offload-defaulted --without-cuda-driver --enable-host-shared --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/16 --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --enable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-16 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --with-build-config=bootstrap-lto-lean --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.2.0 (SUSE Linux) ]
+        ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/16/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/16/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c1b1' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c1b1.']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/16/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc6HENlQ.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7c1b1] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/16] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/16]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/16/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../..]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [-latomic_asneeded] ==> lib [atomic_asneeded]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/crtend.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/16/crtend.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 16.2.0]
+        link line: [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o] ==> linker [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld]
+        link line: [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o] ==> linker architecture flags [-m;elf]
+        ignore line: [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld -plugin /usr/lib64/gcc/x86_64-suse-linux/16/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6HENlQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7c1b1 /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/16 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c1b1.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib64/gcc/x86_64-suse-linux/16/crtend.o /usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o]
+        linker tool for 'C': /usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld -m;elf
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/16] ==> [/usr/lib64/gcc/x86_64-suse-linux/16]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/lib] ==> [/usr/x86_64-suse-linux/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/16/../../..] ==> [/usr/lib64]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-suse-linux/16/crtbegin.o;/usr/lib64/gcc/x86_64-suse-linux/16/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/usr/lib64/gcc/x86_64-suse-linux/16;/usr/lib64;/lib64;/usr/x86_64-suse-linux/lib;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/lib64/gcc/x86_64-suse-linux/16/../../../../x86_64-suse-linux/bin/ld" "-v"
+      GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.45.0.20251103-4
+...
